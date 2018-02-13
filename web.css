@@ -1,0 +1,130 @@
+/*
+Global Styling
+*/
+
+
+
+body {
+    margin: 0px;
+    font-family: Trebuchet MS;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+/*
+Home Page Styling
+*/
+
+.header {
+    float: left;
+    width: 100%;
+    height: 70px;
+    background-color: lightblue;   
+}
+
+#logopic {
+    width: 60px;
+    height: 60px;
+    line-height: 50%;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+}
+
+.topnav {
+    float: right;
+    width: 100px;
+    height: 40px;
+    margin-top: 25px;
+    margin-right: 10px;
+}
+
+#search {
+    border-radius: 10px;
+    float: right;
+}
+
+#profile {
+    height: 60px;
+    width: 60px;
+    float: right;
+    background-color: black;
+    margin-top: 5px;
+    color: white;
+}
+
+.inner {
+    margin-left: 12.5%;
+    float: left;
+    width: 75%;
+    height: 100%;
+    background-color: lightgrey;
+}
+
+.home-article {
+    width: 100%;
+    height: 40%;
+    background-color: grey;
+    margin-top: 3%;
+}
+
+#article-title-1 {
+    padding-top: 10px;
+    width: 100%;
+    height: 15%;
+    font-size: 25pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#article-blurb-1 {
+    width: 75%;
+    height: 50%;
+    border-color: black;
+    border-width: 1.5px;
+    border-style: solid;
+    margin-left: 2.5%;
+}
+
+#article-comments-1 {
+    margin-top: 1%;
+    float: left;
+    font-size: 16pt;
+    height: 25%;
+    width: 75%;
+}
+
+.top-comment {
+    float: left;
+    width: 75%;
+    height: 25%;
+    border-style: solid;
+    border-color: black;
+    margin-left: 2.5%;
+    margin-top: .5%;
+    font-size: 12pt;
+}
+
+.picture-placeholder {
+    float: left;
+    width: 25px;
+    height: 25px;;
+    background-color: black;
+    color: white;
+    font-size: 8pt;
+}
+
+.commenter-name {
+    float: left;
+    font-weight: bold;
+    margin-left: .5%;
+}
+
+.comment-content {
+    float: left;
+    margin-left: 0.5%;
+}
