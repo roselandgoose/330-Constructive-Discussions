@@ -13,6 +13,14 @@ img {
     max-width: 100%;
 }
 
+h2 {
+    padding-left: 10px;
+}
+
+/*
+Global Header Styling
+*/
+
 .header {
     float: left;
     width: 99%;
@@ -62,18 +70,19 @@ Home Page Styling
     float: left;
     width: 75%;
     height: 100%;
-    background-color: lightgrey;
+    background-color: #f2f2f2;
 }
 
 .home-article {
     width: 100%;
     height: 40%;
-    background-color: grey;
+    background-color: lightgrey;
     margin-top: 3%;
 }
 
 .home-article div[id^='article-title'] {
-    padding-top: 10px;
+    padding-top: 10px;                    
+    padding-left: 10px;
     width: 100%;
     height: 20%;
     font-size: 25pt;
@@ -92,13 +101,14 @@ Home Page Styling
 
 .home-article div[id^='article-comments'] {
     margin-top: 1%;
+    margin-left: 1%;
     float: left;
     font-size: 16pt;
     height: 25%;
     width: 75%;
 }
 
-.top-comment {
+.home-top-comment {
     float: left;
     width: 75%;
     height: 25%;
@@ -118,13 +128,13 @@ Home Page Styling
     font-size: 8pt;
 }
 
-.commenter-name {
+.home-commenter-name {
     float: left;
     font-weight: bold;
     margin-left: .5%;
 }
 
-.comment-content {
+.home-comment-content {
     float: left;
     margin-left: 0.5%;
 }
@@ -139,4 +149,15 @@ Home Page Styling
     margin-left: 12.5%;
     float: left;
     width: 75%;
+}
+
+.article { 
+    background-color: #f2f2f2;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.article-comments {
+    background-color:#f2f2f2;
+
 }
