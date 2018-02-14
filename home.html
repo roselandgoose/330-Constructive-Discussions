@@ -5,6 +5,7 @@
             Home Page
         </title>
         <link rel = "stylesheet" type = "text/css" href = "web.css" /> 
+        <script src='http://127.0.0.1:9001/js/socket.js'></script>
     </head>
 
 
@@ -27,11 +28,10 @@
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a> -->
                     <input id = "search" type="text" placeholder="Search..">
-                    
-          </div>
+            </div>
         </div>
 
-        <div class = "inner">
+        <div class = "home-inner">
             <div class = "home-article">
                 <div id = "article-title-1">
                     <a href = 'article1.html'> House Conservatives Revolt Over Immigration </a>
@@ -43,27 +43,27 @@
 
                 <div id = "article-comments-1">
                     <div>Top Comments</div>
-                    
+
                     <div class = "top-comment">
                        <div class = "picture-placeholder">prof 
                            pic
                        </div> 
-                       <div class = "commenter-name">Jane Doe:</div>
+                       <div class = "commenter-name">Jane Doe:
+                       </div>
                        <div class = "comment-content">
                            Comment content goes here
                        </div>
-                       
                     </div>
 
                     <div class = "top-comment">
-                            <div class = "picture-placeholder">prof 
+                        <div class = "picture-placeholder">prof 
                                 pic
-                            </div> 
-                            <div class = "commenter-name">John Doe:</div>
-                            <div class = "comment-content">
+                        </div> 
+                        <div class = "commenter-name">John Doe:
+                        </div>
+                        <div class = "comment-content">
                                 Comment content goes here
-                            </div>
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,6 +104,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
     </body>
 
 
