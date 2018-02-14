@@ -59,6 +59,25 @@ Global Header Styling
     color: white;
 }
 
+/*
+Global Comments Styling
+*/
+
+.picture-placeholder {
+    float: left;
+    width: 25px;
+    height: 25px;;
+    background-color: black;
+    color: white;
+    font-size: 8pt;
+}
+
+.commenter-name {
+    float: left;
+    font-weight: bold;
+    margin-left: .5%;
+}
+
 
 /*
 Home Page Styling
@@ -73,7 +92,7 @@ Home Page Styling
     background-color: #f2f2f2;
 }
 
-.home-article {
+.home-inner .home-article {
     width: 100%;
     height: 40%;
     background-color: lightgrey;
@@ -108,7 +127,7 @@ Home Page Styling
     width: 75%;
 }
 
-.home-top-comment {
+.home-article .home-top-comment {
     float: left;
     width: 75%;
     height: 25%;
@@ -119,29 +138,14 @@ Home Page Styling
     font-size: 12pt;
 }
 
-.picture-placeholder {
-    float: left;
-    width: 25px;
-    height: 25px;;
-    background-color: black;
-    color: white;
-    font-size: 8pt;
-}
-
-.home-commenter-name {
-    float: left;
-    font-weight: bold;
-    margin-left: .5%;
-}
-
-.home-comment-content {
+.home-article .home-comment-content {
     float: left;
     margin-left: 0.5%;
 }
 
 
 /*
-Home Page Styling
+Article Page Styling
 */
 
 
@@ -151,13 +155,30 @@ Home Page Styling
     width: 75%;
 }
 
-.article { 
+.article-inner .article { 
     background-color: #f2f2f2;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.article-comments {
+.article-inner .article-comments {
     background-color:#f2f2f2;
+    height: 20%;
 
+}
+
+.article-comments .article-comment {
+    float: left;
+    width: 75%;
+    height: 50px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 2.5%;
+    margin-top: .5%;
+    font-size: 12pt;
+}
+
+.article-comment .article-comment-content {
+    float: left;
+    margin-left: 0.5%;
 }
