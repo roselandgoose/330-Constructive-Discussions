@@ -72,7 +72,7 @@ Home Page Styling
     margin-top: 3%;
 }
 
-#article-title-1 {
+.home-article div[id^='article-title'] {
     padding-top: 10px;
     width: 100%;
     height: 15%;
@@ -81,7 +81,7 @@ Home Page Styling
     text-decoration: underline;
 }
 
-#article-blurb-1 {
+.home-article div[id^='article-blurb'] {
     width: 75%;
     height: 50%;
     border-color: black;
@@ -90,7 +90,7 @@ Home Page Styling
     margin-left: 2.5%;
 }
 
-#article-comments-1 {
+.home-article div[id^='article-comments'] {
     margin-top: 1%;
     float: left;
     font-size: 16pt;
