@@ -16,7 +16,7 @@ TODO:
             * article-comments
                 * comments-header
                 * top-comment
-                    * picture-placeholder OR profile_pic
+                    * commenter-profile-picture 
                     * commenter-name
                     * comment-summary
 * articleX.html
@@ -30,7 +30,7 @@ TODO:
             * comments-header
             * article-comment
                 * commenter
-                    * picture-placeholder OR profile_pic
+                    * commenter-profile-picture 
                     * commenter-name
                 * comment-content
 
