@@ -29,3 +29,9 @@ TODO:
                     * picture-placeholder OR profile_pic
                     * commenter-name
                     * comment-content
+
+## Comments Modes
+* Home-page top-comment
+* Article-page full-comment
+    * Article-page moused-comment
+* Article-page expanded-comment
