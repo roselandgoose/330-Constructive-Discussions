@@ -26,13 +26,13 @@ TODO:
             * article-title
             * article-metadata
             * article-body
-            * article-comments
-                * comments-header
-                * article-comment
-                    * commenter
-                        * picture-placeholder OR profile_pic
-                        * commenter-name
-                    * comment-content
+        * comments
+            * comments-header
+            * article-comment
+                * commenter
+                    * picture-placeholder OR profile_pic
+                    * commenter-name
+                * comment-content
 
 ## Comments Modes
 * Home-page top-comment
