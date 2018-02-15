@@ -1,7 +1,7 @@
 # Constructive Discussions - Gpan-Prototype
 TODO:
-1. Explicitly identify comment functionality
-2. Make margins reactive to screen size
+1 Explicitly identify comment functionality
+2 Make margins reactive to screen size
 
 ## Structure
 * home.html
