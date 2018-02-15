@@ -1,7 +1,10 @@
 # Constructive Discussions - Gpan-Prototype
+
+BTW. I have a script in all the headers that integrates with my editor for live previews. Let me know if it breaks anything for y'all.
+
 TODO:
-1 Explicitly identify comment functionality
-2 Make margins reactive to screen size
+1. Explicitly identify comment functionality
+2. Make margins reactive to screen size
 
 ## Structure
 * home.html

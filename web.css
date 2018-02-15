@@ -161,22 +161,68 @@ Article Page Styling
 
 .article-inner .article-comments {
     background-color:#f2f2f2;
-    height: 20%;
+    height: 50%;
 }
 
 .article-inner #comments-header {
     padding-left: 10px;
 }
 
-.article-inner .article-comment {
+.article-inner .full-comment {
     float: left;
-    width: 75%;
-    height: 25px;
+    width: auto;
+    height: 200px;
     border-style: solid;
     border-color: black;
     margin-left: 2.5%;
+    margin-right: 2.5%;
     margin-top: .5%;
     font-size: 12pt;
+
+    overflow: hidden;
+    text-overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-inner .comment-buttons {
+    width: auto;
+    height: 25px;
+    background-color: white;
+
+    margin-top: auto;
+}
+
+.article-inner .moused-comment {
+    float: left;
+    width: auto;
+    height: 100px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: .5%;
+    font-size: 12pt;
+
+    overflow: hidden;
+    text-overflow: clip;
+    position: relative;
+}
+
+.article-inner .expanded-comment {
+    float: left;
+    width: auto;
+    height: 100px;
+    border-style: solid;
+    border-color: black;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: .5%;
+    font-size: 12pt;
+
+    overflow: hidden;
+    text-overflow: clip;
+    position: relative;
 }
 
 .article-inner .comment-content {
