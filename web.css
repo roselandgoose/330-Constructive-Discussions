@@ -185,11 +185,11 @@ Article Page Styling
 
 .article-inner .comment-buttons {
     width: auto;
-    height: 10px;
-    background: rgba(242,242,242, 0.85);
+    height: 33px;
+    background: rgb(242,242,242);
+    color: green;
 
     margin-top: auto;
-    transform: translate(0,-10px) scale(1,3);
 }
 
 .article-inner .comment-content {
