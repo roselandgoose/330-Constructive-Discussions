@@ -13,10 +13,6 @@ img {
     max-width: 100%;
 }
 
-h2 {
-    padding-left: 10px;
-}
-
 /*
 Global Header Styling
 */
@@ -28,7 +24,7 @@ Global Header Styling
     background-color: lightblue;   
 }
 
-#logopic {
+.header #logopic {
     width: 60px;
     height: 60px;
     line-height: 50%;
@@ -37,7 +33,7 @@ Global Header Styling
     float: left;
 }
 
-.topnav {
+.header .topnav {
     float: right;
     width: 100px;
     height: 40px;
@@ -45,12 +41,12 @@ Global Header Styling
     margin-right: 10px;
 }
 
-#search {
+.header #search {
     border-radius: 10px;
     float: right;
 }
 
-#profile {
+.header #profile {
     height: 60px;
     width: 60px;
     float: right;
@@ -99,7 +95,7 @@ Home Page Styling
     margin-top: 3%;
 }
 
-.home-article div[id^='article-title'] {
+.home-inner .article-title {
     padding-top: 10px;                    
     padding-left: 10px;
     width: 100%;
@@ -109,7 +105,7 @@ Home Page Styling
     text-decoration: underline;
 }
 
-.home-article div[id^='article-blurb'] {
+.home-inner .article-blurb {
     width: 75%;
     height: 50%;
     border-color: black;
@@ -118,7 +114,7 @@ Home Page Styling
     margin-left: 2.5%;
 }
 
-.home-article div[id^='article-comments'] {
+.home-inner .article-comments {
     margin-top: 1%;
     margin-left: 1%;
     float: left;
@@ -127,7 +123,7 @@ Home Page Styling
     width: 75%;
 }
 
-.home-article .home-top-comment {
+.home-inner .top-comment {
     float: left;
     width: 75%;
     height: 25%;
@@ -138,7 +134,7 @@ Home Page Styling
     font-size: 12pt;
 }
 
-.home-article .home-comment-content {
+.home-inner .comment-summary {
     float: left;
     margin-left: 0.5%;
 }
@@ -155,7 +151,7 @@ Article Page Styling
     width: 75%;
 }
 
-.article-inner .article { 
+.article-inner > .article { 
     background-color: #f2f2f2;
     padding-left: 10px;
     padding-right: 10px;
@@ -164,10 +160,13 @@ Article Page Styling
 .article-inner .article-comments {
     background-color:#f2f2f2;
     height: 20%;
-
 }
 
-.article-comments .article-comment {
+.article-inner #comments-header {
+    padding-left: 10px;
+}
+
+.article-inner .article-comment {
     float: left;
     width: 75%;
     height: 50px;
@@ -178,7 +177,7 @@ Article Page Styling
     font-size: 12pt;
 }
 
-.article-comment .article-comment-content {
+.article-inner .comment-content {
     float: left;
     margin-left: 0.5%;
 }
