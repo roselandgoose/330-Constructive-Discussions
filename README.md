@@ -29,8 +29,9 @@ TODO:
             * article-comments
                 * comments-header
                 * article-comment
-                    * picture-placeholder OR profile_pic
-                    * commenter-name
+                    * commenter
+                        * picture-placeholder OR profile_pic
+                        * commenter-name
                     * comment-content
 
 ## Comments Modes
