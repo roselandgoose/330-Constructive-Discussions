@@ -1,18 +1,27 @@
-# Constructive Discussions - Gpan-Prototype
+# Constructive Discussions
 
 BTW. I have a script in all the headers that integrates with my editor for live previews. Let me know if it breaks anything for y'all.
 
-TODO:
-Explicitly identify comment functionality
-- [ ] Define buttons
-- [ ] Identify appropriate spacing between comments
-- [ ] Implement mouse-over reactivity
-- [ ] Implement on-click reactivity
-Make margins reactive to screen size
-- [x] Article page Desktop/Tablet
-- [x] Home page Desktop/Tablet
-- [ ] Article page mobile
-- [ ] Home page mobile
+## TODO:
+* P5:
+    * Initial Comment Implementation
+        * [ ] Define buttons
+        * [ ] Identify appropriate spacing between comments
+        * [ ] Implement mouse-over reactivity
+        * [ ] Implement on-click reactivity
+    * Video Content Integration
+        * [ ] Embedd a YouTube video
+* P6:
+    * Make page reactive to screen size
+        * [x] Article page Desktop/Tablet
+        * [x] Home page Desktop/Tablet
+        * [ ] Article page mobile
+        * [ ] Home page mobile
+    * Profile page
+    * Commenting and reply functionality
+* P7 (?):
+    * Account creation page
+    * Direct Messaging
 
 ## Structure
 * home.html
