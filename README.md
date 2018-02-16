@@ -6,11 +6,11 @@ TODO:
 Explicitly identify comment functionality
 - [ ] Define buttons
 - [ ] Identify appropriate spacing between comments
-- Implement mouse-over reactivity
-- Implement on-click reactivity
+- [ ] Implement mouse-over reactivity
+- [ ] Implement on-click reactivity
 Make margins reactive to screen size
 - [x] Article page Desktop/Tablet
-- [ ] Home page Desktop/Tablet
+- [x] Home page Desktop/Tablet
 - [ ] Article page mobile
 - [ ] Home page mobile
 
