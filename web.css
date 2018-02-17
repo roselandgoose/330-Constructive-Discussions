@@ -2,6 +2,29 @@
 Global Styling
 */
 
+.demo-card-wide.mdl-card {
+    width: 512px;
+  }
+  .demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('https://cdn.theatlantic.com/assets/media/img/mt/2018/02/RTX3W7LZ/lead_960.jpg?1518585449') center / cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+
+  .demo-layout-transparent {
+    background: url('https://cdn.theatlantic.com/assets/media/img/mt/2018/02/RTX3W7LZ/lead_960.jpg?1518585449') center / cover;
+  }
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+  }
+
+
 
 body {
     margin: 0px;
