@@ -29,7 +29,7 @@ Home Page Styling
 }
 
 .article-title {
-    max-height: 30px;
+    padding-bottom: 4px !important;
 }
 
 .article-blurb {
