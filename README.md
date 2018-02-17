@@ -4,7 +4,7 @@ BTW. I have a script in all the headers that integrates with my editor for live 
 
 ## Tasks and Features
 * Passive user view article and discussion
-    * Need also video to meet external content integration
+    * Need also video to meet external content integration.
 
 ## TODO:
 * P5:
