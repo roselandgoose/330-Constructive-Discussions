@@ -1,13 +1,37 @@
-.demo-card-wide.mdl-card {
-    width: 512px;
+/*
+Global Comments Styling
+*/
+
+.commenter-profile-picture {
+    float: left;
+
+    margin-left: 5px;
+    margin-top: 5px;
+
+    background-color: black;
 }
 
-.demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../assets/demos/welcome_card.jpg') center / cover;
+.commenter-name {
+    float: left;
+    
+    padding-left: 5px;
+    padding-top: 9px;
+    
+    font-weight: bold;
 }
 
-.demo-card-wide > .mdl-card__menu {
-    color: #fff;
+/*
+Home Page Styling
+*/
+
+.article-comments .top-comment {
+    background-color: lightgrey;
+}
+
+.article-title {
+    max-height: 30px;
+}
+
+.article-blurb {
+    max-height: 145px;
 }
