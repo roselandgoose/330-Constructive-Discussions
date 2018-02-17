@@ -61,3 +61,24 @@
 .demo-footer .mdl-mini-footer--link-list a {
   font-size: 13px;
 }
+
+#video-size{
+  height: 250px;
+  float: left;
+}
+
+.border1{
+  width: 400px;
+  float: left;
+}
+
+.border2{
+  width: 400px;
+  float: right;
+  text-align: center;
+}
+
+#ctitle{
+  font-size: 20px;
+  font-weight: bold;
+}
