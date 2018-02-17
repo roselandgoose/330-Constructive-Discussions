@@ -2,6 +2,10 @@
 
 BTW. I have a script in all the headers that integrates with my editor for live previews. Let me know if it breaks anything for y'all.
 
+## Tasks and Features
+* Passive user view article and discussion
+    * Need also video to meet external content integration
+
 ## TODO:
 * P5:
     * Initial Comment Implementation
