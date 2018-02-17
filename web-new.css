@@ -1,4 +1,18 @@
 /*
+Global Header Styling
+*/
+
+/* -- Was used to fix old drawer
+.mdl-layout__drawer-button {
+    padding-top: 11px;
+}
+*/
+.search-field {
+    margin-left: 40% !important;
+}
+
+
+/*
 Global Comments Styling
 */
 
