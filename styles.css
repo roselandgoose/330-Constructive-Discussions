@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+
+ #black{
+   color: black;
+ }
+
 .demo-ribbon {
   width: 100%;
   height: 40vh;

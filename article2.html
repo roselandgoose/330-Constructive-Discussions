@@ -46,9 +46,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="web-new.css">
     <style>
     #view-source {
       position: fixed;
@@ -66,7 +66,7 @@
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Constructive Discussions</span>
+          <a class="mdl-navigation__link"href="home-new.html"> <span class="mdl-color-text--black mdl-layout-title">Constructive Discussions</span> </a>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -77,6 +77,10 @@
               <label class="mdl-textfield__label" for="search">Enter your query...</label>
             </div>
           </div>
+          <nav id = "profile-article" class="mdl-navigation">
+            <a class="mdl-navigation__link" id = "black" href="">Profile <img class = "profile_icon" src = "images/female_image.png"> </a>
+            <!-- <a class="mdl-navigation__link" href="">About</a> -->
+        </nav>
         </div>
       </header>
 
@@ -99,36 +103,38 @@
 
             <div class="border2">
               <p id="ctitle"> Top Comments </p>
-              <div class = "moused-comment">
-                <div class = "commenter">
-                    <div class = "commenter-profile-picture"> 
-                       <img src = "images/female_image.png">
-                    </div> 
-                    <div class="commenter-name">Jane Doe:</div>
-                </div>
-                <div class = "comment-content">
-                    Sample comment inserted
-                </div>
-                <div class = "comment-buttons">
-                </div>
-              </div>
 
-              <div class = "moused-comment">
-                <div class = "commenter">
+              <div class="mdl-card__actions mdl-grid article-comments">
+                <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
                     <div class = "commenter-profile-picture">
-                       <img src = "images/female_image.png">
-                    </div> 
-                    <div class="commenter-name">Gene Doe:</div>
+                        <img src = "images/female_image.png" width=25px height=25px>
+                    </div>
+                    <div class="commenter-name">
+                        Jane Doe
+                    </div>
+                    <div class = "mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                    </div>
+                </div> <!-- Closes comment -->
+
+                <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                    <div class = "commenter-profile-picture">
+                        <img src = "images/male_image.png" width=25px height=25px>
+                    </div>
+                    <div class="commenter-name">
+                        John Doe
+                    </div>
+                    <div class = "mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                    </div>
                 </div>
-                <div class = "comment-content">
-                    Sample comment 2
-                </div>
-              </div>
+
+
             </div>
           </div>
         </div>
         
-        <footer class="demo-footer mdl-mini-footer">
+        <!-- <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
               <li><a href="#">Help</a></li>
@@ -136,10 +142,9 @@
               <li><a href="#">User Agreement</a></li>
             </ul>
           </div>
-        </footer>
+        </footer> -->
       </main>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/article/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </body>
 </html>
