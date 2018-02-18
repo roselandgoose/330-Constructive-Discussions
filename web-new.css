@@ -8,6 +8,12 @@ Global Header Styling
 }
 */
 
+.title{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
 #black {
     color: black;
 }
@@ -78,12 +84,41 @@ Home Page Styling
 
 .article-title {
     padding-bottom: 4px !important;
+    height: 150px;
 }
 
 .article-blurb {
     max-height: 145px;
 }
 
+#art1 {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(images/lead_960.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+#art2 {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(images/capitol-hill.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.sub-title {
+    font-family: 'Times New Roman', Times, serif;
+}
 
 /*
 Comment bar styles
