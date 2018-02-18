@@ -21,7 +21,7 @@
 
         <!-- Uses a transparent header that draws on top of the layout's background -->
         <div class="mdl-layout mdl-js-layout">
-            <header class="mdl-layout__header mdl-layout__header-row">
+            <header class="mdl-layout__header mdl-layout--fixed-header mdl-layout__header-row">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
                     <a class="mdl-navigation__link"href="home-new.html"> <span class="mdl-layout-title">Constructive Discussions</span> </a>
@@ -40,10 +40,9 @@
                     </div>
 
                     <!-- Navigation -->
-                    <nav class="mdl-navigation" id = "profile">
-                        <a class="mdl-navigation__link" href="">Profile <img class = "profile_icon" src = "images/female_image.png"> </a>
-                        <!-- <a class="mdl-navigation__link" href="">About</a> -->
-                    </nav>
+                    <a class="mdl-navigation__link" href="">
+                        <img class = "profile_icon" src = "images/female_image.png">
+                    </a>
                 </div>
             </header>
 
@@ -51,11 +50,8 @@
                 <div class="mdl-grid">
 
                     <div class ="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop">
-                        <h3 class = "title">TOP STORIES</h3>
-
-                        </div>
-
-
+                        <h3 class = "title mdl-">TOP STORIES</h3>
+                    </div>
 
                     <div class="demo-card mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid mdl-color--white mdl-shadow--4dp content mdl-card">
                             <a class = "mdl-navigation__link mdl-cell mdl-cell--12-col" href = 'article.html'>
