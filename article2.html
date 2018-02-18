@@ -63,36 +63,39 @@
   </head>
 
   <body>
-    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-        <div class="mdl-layout__header-row">
-          <a class="mdl-navigation__link"href="home-new.html"> <span class="mdl-color-text--black mdl-layout-title">Constructive Discussions</span> </a>
-          <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search">
-              <label class="mdl-textfield__label" for="search">Enter your query...</label>
-            </div>
-          </div>
-          <nav id = "profile-article" class="mdl-navigation">
-            <a class="mdl-navigation__link" id = "black" href="">Profile <img class = "profile_icon" src = "images/female_image.png"> </a>
-            <!-- <a class="mdl-navigation__link" href="">About</a> -->
-        </nav>
-        </div>
-      </header>
+	<div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+	  <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+		<div class="mdl-layout__header-row">
+			<a class="mdl-navigation__link"href="home-new.html"> <span class="mdl-color-text--black mdl-layout-title">Constructive Discussions</span> </a>
+			<div class="mdl-layout-spacer"></div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+			<label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+				<i class="material-icons">search</i>
+			</label>
+			<div class="mdl-textfield__expandable-holder">
+				<input class="mdl-textfield__input" type="text" id="search">
+				<label class="mdl-textfield__label" for="search">Enter your query...</label>
+			</div>
+			</div>
+			<nav id = "profile-article" class="mdl-navigation">
+			<a class="mdl-navigation__link" id = "black" href="">Profile <img class = "profile_icon" src = "images/female_image.png"> </a>
+			<!-- <a class="mdl-navigation__link" href="">About</a> -->
+		</nav>
+		</div>
+		</header>
 
       <div class="demo-ribbon"></div>
       <main class="demo-main mdl-layout__content">
         <div class="demo-container mdl-grid">
-          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
 
             <a class = "mdl-navigation__link" href= "http://www.wsj.com/video/spending-deal-means-trillion-dollar-deficits/8E1EBB17-773C-41B2-9DE4-8F80AB957532.html"><h3 class="sub-title">Spending Deal Means Trillion-Dollar Deficit</h3></a>
-            
-            <div class="border1">
+            <ul class="article-metadata">
+				      <li class="date"> 2018-02-12 06:00:00</li>
+			      </ul>
+
+            <div class="article-body mdl-cell mdl-cell--12-col">
               <video id="video-size" controls>
                 <source src="Spending.mp4" type="video/mp4">
               </video>
@@ -100,10 +103,14 @@
               <p> WSJ's Gerald F. Seib explains why the budget deficit is set to top $1 trillion this year, 
                 thanks to tax cuts and increases in military and nonmilitary spending. Photo: Getty </p>
             </div>
+          </div>
 
-            <div class="border2">
-              <p id="ctitle"> Top Comments </p>
-
+          <div class ="comments-bar mdl-cell--top mdl-color--grey content mdl-shadow--4dp mdl-cell mdl-cell--3-col mdl-grid">
+            <div class = "mdl-cell mdl-cell--2-col"></div>
+            <div class = "mdl-cell mdl-cell--8-col">
+              <h5>Top Comments</h5>
+            </div>
+            <div class = "mdl-grid">
               <div class="mdl-card__actions mdl-grid article-comments">
                 <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
                     <div class = "commenter-profile-picture">
@@ -128,11 +135,9 @@
                             Comment content goes here
                     </div>
                 </div>
-
-
+              </div>
             </div>
           </div>
-        </div>
         
         <!-- <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">

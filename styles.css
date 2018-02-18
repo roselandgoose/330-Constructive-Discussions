@@ -81,22 +81,9 @@
 }
 
 #video-size{
-  height: 250px;
-  float: left;
+  height: 400px;
 }
 
 .border1{
-  width: 400px;
-  float: left;
-}
-
-.border2{
-  width: 400px;
-  float: right;
-  text-align: center;
-}
-
-#ctitle{
-  font-size: 20px;
-  font-weight: bold;
+  width: 800px;
 }
