@@ -3,7 +3,7 @@
 
     <head>
         <title>
-            Home Page
+            Home
         </title> 
 
         <link rel="stylesheet" href="web-new.css">
@@ -24,34 +24,135 @@
             <header class="mdl-layout__header mdl-layout__header-row">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
-                    <span class="mdl-layout-title">Title</span>
-                    <!-- Add spacer, to align navigation to the right -->
-                    <div class="mdl-layout-spacer"></div>
+                    <span class="mdl-layout-title">Constructive Discussions</span>
+
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-field">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="expando1">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" id="expando1">
+                            <label class="mdl-textfield__label" for="expando1">Expandable text field</label>
+                        </div>
+                    </div>
+
                     <!-- Navigation -->
                     <nav class="mdl-navigation">
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
-                        <a class="mdl-navigation__link" href="">Link</a>
+                        <a class="mdl-navigation__link" href="">Profile</a>
+                        <!-- <a class="mdl-navigation__link" href="">About</a> -->
                     </nav>
                 </div>
             </header>
 
-            <div class="mdl-layout__drawer">
-                <span class="mdl-layout-title">Title</span>
-                <nav class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                    <a class="mdl-navigation__link" href="">Link</a>
-                </nav>
-            </div>
-
             <main class="mdl-layout__content">
                 <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-                    <div class="mdl-cell--8-col mdl-color--white mdl-shadow--4dp content ">
-                        TEXT
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid mdl-color--white mdl-shadow--4dp content mdl-card">
+                        <div class="mdl-card__title mdl-card__title-text article-title">
+                            <a href = 'article1.html'> House Conservatives Revolt Over Immigration </a>
+                        </div>
+                        <div class="mdl-card__supporting-text article-blurb">
+                            Filler text here / article summary ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis maximus erat. Nunc vitae volutpat elit. Integer porttitor porttitor neque, sed eleifend enim. Vestibulum non justo metus. Ut tincidunt lectus id diam aliquet, sit amet feugiat sapien dictum. Ut lacinia varius nunc vehicula hendrerit. Fusce nulla arcu, efficitur sed rhoncus in, aliquam a tellus. Proin est nisi, sodales vitae arcu et, vehicula molestie tortor. Morbi erat orci, rutrum hendrerit molestie quis, rhoncus ut orci. Aliquam feugiat risus sed interdum condimentum. Morbi ac eleifend est, non elementum magna. Morbi dictum est risus, in blandit dui elementum vitae. Fusce vitae accumsan quam. Cras bibendum nunc in mauris dapibus pellentesque. Quisque feugiat nisi vitae orci dapibus faucibus eget vel ex. Integer rhoncus elit sit amet elit pharetra venenatis. Nunc eget lacus nulla. Ut rutrum vulputate massa in fringilla. Curabitur purus lacus, sodales vel diam nec, luctus dictum diam. Cras ullamcorper imperdiet lectus a dictum. Morbi mattis nisi rhoncus nunc dapibus, quis cursus mi fringilla. Vestibulum non facilisis erat. Cras convallis, lectus non maximus ullamcorper, libero orci dapibus nunc, sed tempor nunc neque et ex. Sed dictum ut neque vel congue. Praesent id felis suscipit, pellentesque sem quis, vulputate odio.
+                        </div>
+                        <div class="mdl-card__actions mdl-grid article-comments">
+                            <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                                <div class = "commenter-profile-picture">
+                                    <img src = "images/female_image.png" width=25px height=25px>
+                                </div>
+                                <div class="commenter-name">
+                                    Jane Doe
+                                </div>
+                                <div class = "mdl-card__supporting-text comment-summary">
+                                        Comment content goes here
+                                </div>
+                            </div> <!-- Closes comment -->
+
+                            <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                                <div class = "commenter-profile-picture">
+                                    <img src = "images/male_image.png" width=25px height=25px>
+                                </div>
+                                <div class="commenter-name">
+                                    John Doe
+                                </div>
+                                <div class = "mdl-card__supporting-text comment-summary">
+                                        Comment content goes here
+                                </div>
+                            </div> <!-- Closes comment -->
+
+                        </div> <!-- Closes article-comments -->
+
+                    </div> <!-- Closes the article card/cell -->
+
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid mdl-color--white mdl-shadow--4dp content mdl-card">
+                        <div class="mdl-card__title mdl-card__title-text article-title">
+                            <a href = 'article1.html'> Trump does that thing again </a>
+                        </div>
+                        <div class="mdl-card__supporting-text article-blurb">
+                            Filler text here / article summary ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis maximus erat. Nunc vitae volutpat elit. Integer porttitor porttitor neque, sed eleifend enim. Vestibulum non justo metus. Ut tincidunt lectus id diam aliquet, sit amet feugiat sapien dictum. Ut lacinia varius nunc vehicula hendrerit. Fusce nulla arcu, efficitur sed rhoncus in, aliquam a tellus. Proin est nisi, sodales vitae arcu et, vehicula molestie tortor. Morbi erat orci, rutrum hendrerit molestie quis, rhoncus ut orci. Aliquam feugiat risus sed interdum condimentum. Morbi ac eleifend est, non elementum magna. Morbi dictum est risus, in blandit dui elementum vitae. Fusce vitae accumsan quam. Cras bibendum nunc in mauris dapibus pellentesque. Quisque feugiat nisi vitae orci dapibus faucibus eget vel ex. Integer rhoncus elit sit amet elit pharetra venenatis. Nunc eget lacus nulla. Ut rutrum vulputate massa in fringilla. Curabitur purus lacus, sodales vel diam nec, luctus dictum diam. Cras ullamcorper imperdiet lectus a dictum. Morbi mattis nisi rhoncus nunc dapibus, quis cursus mi fringilla. Vestibulum non facilisis erat. Cras convallis, lectus non maximus ullamcorper, libero orci dapibus nunc, sed tempor nunc neque et ex. Sed dictum ut neque vel congue. Praesent id felis suscipit, pellentesque sem quis, vulputate odio.
+                        </div>
+                        
+                        <div class="mdl-card__actions mdl-grid article-comments">
+                            <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                                <div class = "commenter-profile-picture">
+                                    <img src = "images/female_image.png" width=25px height=25px>
+                                </div>
+                                <div class="commenter-name">
+                                    Jane Doe
+                                </div>
+                                <div class = "mdl-card__supporting-text comment-summary">
+                                        Comment content goes here
+                                </div>
+                            </div> <!-- Closes comment -->
+
+                            <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                                <div class = "commenter-profile-picture">
+                                    <img src = "images/male_image.png" width=25px height=25px>
+                                </div>
+                                <div class="commenter-name">
+                                    John Doe
+                                </div>
+                                <div class = "mdl-card__supporting-text comment-summary">
+                                        Comment content goes here
+                                </div>
+                            </div> <!-- Closes comment -->
+
+                        </div> <!-- Closes article-comments -->
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop mdl-grid mdl-color--white mdl-shadow--4dp content mdl-card">
+                        <div class="mdl-card__title mdl-card__title-text article-title">
+                            <a href = 'article1.html'> Government Shutdown Narrowly Avoided </a>
+                        </div>
+                        <div class="mdl-card__supporting-text article-blurb">
+                            Filler text here / article summary ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis maximus erat. Nunc vitae volutpat elit. Integer porttitor porttitor neque, sed eleifend enim. Vestibulum non justo metus. Ut tincidunt lectus id diam aliquet, sit amet feugiat sapien dictum. Ut lacinia varius nunc vehicula hendrerit. Fusce nulla arcu, efficitur sed rhoncus in, aliquam a tellus. Proin est nisi, sodales vitae arcu et, vehicula molestie tortor. Morbi erat orci, rutrum hendrerit molestie quis, rhoncus ut orci. Aliquam feugiat risus sed interdum condimentum. Morbi ac eleifend est, non elementum magna. Morbi dictum est risus, in blandit dui elementum vitae. Fusce vitae accumsan quam. Cras bibendum nunc in mauris dapibus pellentesque. Quisque feugiat nisi vitae orci dapibus faucibus eget vel ex. Integer rhoncus elit sit amet elit pharetra venenatis. Nunc eget lacus nulla. Ut rutrum vulputate massa in fringilla. Curabitur purus lacus, sodales vel diam nec, luctus dictum diam. Cras ullamcorper imperdiet lectus a dictum. Morbi mattis nisi rhoncus nunc dapibus, quis cursus mi fringilla. Vestibulum non facilisis erat. Cras convallis, lectus non maximus ullamcorper, libero orci dapibus nunc, sed tempor nunc neque et ex. Sed dictum ut neque vel congue. Praesent id felis suscipit, pellentesque sem quis, vulputate odio.
+                        </div>
+                        
+                        <div class="mdl-card__actions mdl-grid article-comments">
+                            <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                                <div class = "commenter-profile-picture">
+                                    <img src = "images/female_image.png" width=25px height=25px>
+                                </div>
+                                <div class="commenter-name">
+                                    Jane Doe
+                                </div>
+                                <div class = "mdl-card__supporting-text comment-summary">
+                                        Comment content goes here
+                                </div>
+                            </div> <!-- Closes comment -->
+
+                            <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp top-comment">
+                                <div class = "commenter-profile-picture">
+                                    <img src = "images/male_image.png" width=25px height=25px>
+                                </div>
+                                <div class="commenter-name">
+                                    John Doe
+                                </div>
+                                <div class = "mdl-card__supporting-text comment-summary">
+                                        Comment content goes here
+                                </div>
+                            </div> <!-- Closes comment -->
+
+                        </div> <!-- Closes article-comments -->
                     </div>
                 </div>
             </main>

@@ -1,13 +1,51 @@
-.demo-card-wide.mdl-card {
-    width: 512px;
+/*
+Global Header Styling
+*/
+
+/* -- Was used to fix old drawer
+.mdl-layout__drawer-button {
+    padding-top: 11px;
+}
+*/
+.search-field {
+    margin-left: 40% !important;
 }
 
-.demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../assets/demos/welcome_card.jpg') center / cover;
+
+/*
+Global Comments Styling
+*/
+
+.commenter-profile-picture {
+    float: left;
+
+    margin-left: 5px;
+    margin-top: 5px;
+
+    background-color: black;
 }
 
-.demo-card-wide > .mdl-card__menu {
-    color: #fff;
+.commenter-name {
+    float: left;
+    
+    padding-left: 5px;
+    padding-top: 9px;
+    
+    font-weight: bold;
+}
+
+/*
+Home Page Styling
+*/
+
+.article-comments .top-comment {
+    background-color: lightgrey;
+}
+
+.article-title {
+    padding-bottom: 4px !important;
+}
+
+.article-blurb {
+    max-height: 145px;
 }
