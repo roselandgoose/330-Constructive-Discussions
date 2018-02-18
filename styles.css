@@ -193,6 +193,12 @@ Home Page Styling
     font-family: 'Times New Roman', Times, serif;
 }
 
+.whole-card-link {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+}
+
 /*
 Comment bar styles
 */
