@@ -72,13 +72,6 @@
   margin-top: 48px;
 }
 
-.demo-footer {
-  padding-left: 40px;
-}
-
-.demo-footer .mdl-mini-footer--link-list a {
-  font-size: 13px;
-}
 
 #video-size{
   height: 400px;
@@ -86,4 +79,124 @@
 
 .border1{
   width: 800px;
+}
+
+
+/*
+Global Header Styling
+*/
+
+.title{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+#black {
+    color: black;
+}
+
+#profile {
+    border-style: solid;
+    border-color: white;
+    border-width: .5px;
+    height: 75%;
+}
+
+#profile-article {
+    border-style: solid;
+    border-color: black;
+    border-width: .5px;
+    height: 75%;
+    color: black;
+}
+
+.img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.mdl-layout__header-row {
+    width: 100%;
+}
+
+.profile_icon {
+    height: 40px;
+    width: 40px;
+}
+
+/*
+Global Comments Styling
+*/
+
+.commenter-profile-picture {
+    float: left;
+
+    margin-left: 5px;
+    margin-top: 5px;
+
+    background-color: black;
+}
+
+.commenter-name {
+    float: left;
+    
+    padding-left: 5px;
+    padding-top: 9px;
+    
+    font-weight: bold;
+}
+
+/*
+Home Page Styling
+*/
+
+.article-comments .top-comment {
+    background-color: lightgrey;
+}
+
+.article-title {
+    padding-bottom: 4px !important;
+    height: 150px;
+}
+
+.article-blurb {
+    max-height: 145px;
+}
+
+#art1 {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(images/lead_960.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+#art2 {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(images/capitol-hill.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.sub-title {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*
+Comment bar styles
+*/
+
+.comments-bar{
+    padding: 20px;
 }
