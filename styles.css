@@ -14,6 +14,59 @@
  * limitations under the License.
  */
 
+ .fab.active {
+    cursor: default;
+    background: #FFF;
+    border-radius: .125em;
+    width: 100%;
+    height: 350px;
+    box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35);
+    top: 10%;
+  }
+
+
+ .active .fab-icon {
+    display: none;
+  }
+  
+  .active .protect {
+    background: none;
+  }
+  
+  .comment_wrapper {
+    display: none;
+  }
+  
+  .active .comment_wrapper {
+    margin: 10%;
+    display: block;
+    height: 75%;
+    width: 200px;
+  }
+  
+  #comment_header {
+    position: absolute;
+    width: 100%;
+    background: #d35400;
+  }
+  
+  .comment_wrapper {
+
+    height: 50px;
+    width: 50px;
+    color: #757575;
+  }
+
+  .button_wrapper {
+      position: relative;
+      right: 10;
+      bottom: 0;
+  }
+
+
+
+
+
 
  .demo-card-image.mdl-card {
   height: 500px;
