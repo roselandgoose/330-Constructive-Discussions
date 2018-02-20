@@ -30,18 +30,18 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [ ] Direct Messaging
 
 ## Structure
-* home.html <body> > <div class="mdl-layout">
-    * <header>
-    * <main>
-        * <div class="mdl-title">
-        * <div class="home-article">
-            * <a class="article-title">
-            * <div class="article-blurb">
-            * <div class="article-comments">
-                * <div class="top-comment">
-                    * <div class="commenter-profile-picture">
-                    * <div class="commenter-name">
-                    * <div class="comment-summary">
+* home.html body > div class="mdl-layout"
+    * header
+    * main
+        * div class="mdl-title"
+        * div class="home-article"
+            * a class="article-title"
+            * div class="article-blurb"
+            * div class="article-comments"
+                * div class="top-comment"
+                    * div class="commenter-profile-picture"
+                    * div class="commenter-name"
+                    * div class="comment-summary"
 * articleX.html (not up to date)
     * header
     * article-inner
