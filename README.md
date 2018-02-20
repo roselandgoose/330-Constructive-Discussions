@@ -10,7 +10,7 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [ ] Corrected header and styles
     * [ ] Comment functionality
         * [x] Comment submission box
-            * [ ] Comment box that clears with cancel
+        * [ ] Comment box that clears with cancel
         * [ ] Comments that stick
         * [ ] Replies to comments
 * P6 - Sunday:
