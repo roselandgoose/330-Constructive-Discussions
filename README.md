@@ -6,12 +6,12 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * Video Content Integration
         * [x] Embedd a YouTube video
 * P6 - Thursday:
-    * [ ] Two scrollable columns
+    * [x] Two scrollable columns
     * [ ] Corrected header and styles
     * [ ] Comment functionality
         * [x] Comment submission box
-        * [ ] Comment box that clears with cancel
-        * [ ] Comments that stick
+        * [x] Comment box that clears with cancel
+        * [x] Comments that stick
         * [ ] Replies to comments
 * P6 - Sunday:
     * [x] Define buttons
@@ -30,34 +30,34 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [ ] Direct Messaging
 
 ## Structure
-* home.html body > div class="mdl-layout"
+* index.html body > div class="mdl-layout"
     * header
     * main
         * div class="mdl-title"
         * div class="home-article"
             * a class="article-title"
             * div class="article-blurb"
-            * div class="article-comments"
+            * div class="home-comments"
                 * div class="top-comment"
                     * div class="commenter-profile-picture"
                     * div class="commenter-name"
                     * div class="comment-summary"
-* articleX.html (not up to date)
+* article.html
     * header
-    * article-inner
-        * article
-            * article-title
-            * article-metadata
-            * article-body
-        * comments
-            * comments-header
-            * article-comment
-                * commenter
-                    * commenter-profile-picture 
-                    * commenter-name
-                * comment-content
+    * main
+        * div class="article"
+            * a class="article-title"
+            * ul class="article-metadata"
+            * div class="article-image"
+            * div class="article-body"
+        * div class="comments"
+            * div class="comments-header"
+            * div class="comment"
+                * div class="commenter-profile-picture"
+                * div class="commenter-name"
+                * div class="comment-content"
 
-## Comments Modes
+## Comments Modes (not up-to-date)
 * Home-page top-comment
 * Article-page full-comment
     * Article-page moused-comment

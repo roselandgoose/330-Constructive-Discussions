@@ -14,6 +14,187 @@
  * limitations under the License.
  */
 
+/*
+ * Global
+ */
+
+main {
+    height: 100%;
+}
+
+/* Global Header */
+
+#black {
+    color: black;
+}
+
+#profile {
+    border-style: solid;
+    border-color: white;
+    border-width: .5px;
+    height: 75%;
+}
+
+#profile-article {
+    border-style: solid;
+    border-color: black;
+    border-width: .5px;
+    height: 75%;
+    color: black;
+}
+
+.mdl-layout__header-row {
+    width: 100%;
+}
+
+.profile_icon {
+    height: 40px;
+    width: 40px;
+}
+
+/* Global Comments */
+
+.commenter-profile-picture {
+    float: left;
+
+    margin-left: 5px;
+    margin-top: 5px;
+
+    background-color: black;
+}
+
+.commenter-name {
+    float: left;
+    
+    padding-left: 5px;
+    padding-top: 9px;
+    
+    font-weight: bold;
+}
+
+/*
+ * Home Page
+ */
+
+.home-article .article-title {
+    padding-bottom: 4px !important;
+    height: 150px;
+}
+
+.home-article .article-blurb {
+    max-height: 145px;
+}
+
+#art1 {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(images/lead_960.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#art2 {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(images/capitol-hill.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.home-comments .top-comment {
+    background-color: lightgrey;
+}
+
+.whole-card-link {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+}
+
+.read-more-button-container {
+    margin: 0px !important;
+    height: 0px;
+}
+
+.read-more-button {
+    position: relative !important;
+    transform: translate(-10px, -45px);
+    
+    float: right;
+    
+    z-index: 9999;
+
+    background-color: lightgrey !important; 
+}
+
+/*
+ * Content Page
+ */
+
+.article {
+    overflow-y: scroll;
+}
+
+/* Article Image */
+
+ .demo-card-image.mdl-card {
+  height: 500px;
+  background: url('images/lead_960.jpg') center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Video Page */
+
+#video-size{
+  height: 400px;
+}
+
+.border1{
+  width: 800px;
+}
+
+/* Content Page Comments */
+
+.comments-bar{
+    padding: 20px;
+}
+
+
+#view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+.comments-bar {
+    overflow-y: scroll;
+    height: 98%;
+}
+.comments .comment {
+    background-color: lightgrey;
+}
+
  .fab.active {
     cursor: default;
     background: #FFF;
@@ -23,7 +204,6 @@
     box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35);
     top: 10%;
   }
-
 
  .active .fab-icon {
     display: none;
@@ -62,194 +242,3 @@
       right: 10;
       bottom: 0;
   }
-
-
-
-
-
-
- .demo-card-image.mdl-card {
-  height: 500px;
-  background: url('images/lead_960.jpg') center / cover;
-}
-.demo-card-image > .mdl-card__actions {
-  height: 52px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
-}
-.demo-card-image__filename {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-#video-size{
-  height: 400px;
-}
-
-.border1{
-  width: 800px;
-}
-
-
-/*
-Global Header Styling
-*/
-
-.title{
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
-    text-decoration: underline;
-}
-
-#black {
-    color: black;
-}
-
-#profile {
-    border-style: solid;
-    border-color: white;
-    border-width: .5px;
-    height: 75%;
-}
-
-#profile-article {
-    border-style: solid;
-    border-color: black;
-    border-width: .5px;
-    height: 75%;
-    color: black;
-}
-
-.img{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.mdl-layout__header-row {
-    width: 100%;
-}
-
-.profile_icon {
-    height: 40px;
-    width: 40px;
-}
-
-/*
-Global Comments Styling
-*/
-
-.commenter-profile-picture {
-    float: left;
-
-    margin-left: 5px;
-    margin-top: 5px;
-
-    background-color: black;
-}
-
-.commenter-name {
-    float: left;
-    
-    padding-left: 5px;
-    padding-top: 9px;
-    
-    font-weight: bold;
-}
-
-/*
-Home Page Styling
-*/
-
-.article-comments .top-comment {
-    background-color: lightgrey;
-}
-
-.article-title {
-    padding-bottom: 4px !important;
-    height: 150px;
-}
-
-.article-blurb {
-    max-height: 145px;
-}
-
-#art1 {
-    background:     
-    linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.2)
-      ),
-    url(images/lead_960.jpg);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-
-#art2 {
-    background:     
-    linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.2)
-      ),
-    url(images/capitol-hill.png);
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-
-.whole-card-link {
-    position: absolute;
-    top: 0; left: 0;
-    height: 100%; width: 100%;
-}
-
-.read-more-button-container {
-    margin: 0px !important;
-    height: 0px;
-}
-
-.read-more-button {
-    position: relative !important;
-    transform: translate(-10px, -45px);
-    
-    float: right;
-    
-    z-index: 9999;
-
-    background-color: lightgrey !important; 
-}
-
-/*
-Comment bar styles
-*/
-
-.comments-bar{
-    padding: 20px;
-}
-
-
-#view-source {
-    position: fixed;
-    display: block;
-    right: 0;
-    bottom: 0;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    z-index: 900;
-}
-
-.article {
-    overflow-y: scroll;
-}
-
-.comments-bar {
-    overflow-y: scroll;
-    height: 98%;
-}
-
-main {
-    height: 100%;
-}
