@@ -244,3 +244,12 @@ Comment bar styles
 .article {
     overflow-y: scroll;
 }
+
+.comments-bar {
+    overflow-y: scroll;
+    height: 98%;
+}
+
+main {
+    height: 100%;
+}
