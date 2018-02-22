@@ -22,6 +22,16 @@ main {
     height: 100%;
 }
 
+#view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
 /* Global Header */
 
 #black {
@@ -76,12 +86,12 @@ main {
  * Home Page
  */
 
-.home-article .article-title {
+.home-content .home-content-title {
     padding-bottom: 4px !important;
     height: 150px;
 }
 
-.home-article .article-blurb {
+.home-content .home-blurb {
     max-height: 145px;
 }
 
@@ -109,7 +119,7 @@ main {
     background-repeat: no-repeat;
 }
 
-.home-comments .top-comment {
+.home-comments .home-comment {
     background-color: lightgrey;
 }
 
@@ -139,7 +149,7 @@ main {
  * Content Page
  */
 
-.article {
+.content {
     overflow-y: scroll;
 }
 
@@ -172,10 +182,13 @@ main {
 
 /* Content Page Comments */
 
-.comments-bar{
-    padding: 20px;
-}
+.comments {
+    height: 98%;
 
+    padding: 20px;
+
+    overflow-y: scroll;
+}
 
 #view-source {
     position: fixed;

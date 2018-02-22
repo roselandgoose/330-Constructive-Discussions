@@ -7,7 +7,7 @@ BTW. I have a script in all the headers that integrates with my editor for live 
         * [x] Embedd a YouTube video
 * P6 - Thursday:
     * [x] Two scrollable columns
-    * [ ] Corrected header and styles
+    * [x] Corrected header and styles
     * [ ] Comment functionality
         * [x] Comment submission box
         * [x] Comment box that clears with cancel
@@ -19,12 +19,20 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [ ] Identify appropriate spacing between comments
     * [ ] Implement mouse-over reactivity
     * [ ] Implement on-click reactivity
+    * [ ] Graphic Design
+        * [ ] Font
+        * [ ] Consistence and attractive allignment
 * P7:
     * [ ] Make page reactive to screen size
         * [x] Article page Desktop/Tablet
         * [x] Home page Desktop/Tablet
         * [ ] Article page mobile
-        * [ ] Home page mobile
+            * [ ] Appropriate Content-image sizing
+            * [ ] Article shrunk appropriately
+            * [ ] Dynamic Video sizing
+            * [ ] Jump-to comments button
+            * [ ] Deactivated two-column scrolling
+        * [x] Home page mobile
     * [ ] Profile page
     * [ ] Account creation page
     * [ ] Direct Messaging
@@ -34,22 +42,36 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * header
     * main
         * div class="mdl-title"
-        * div class="home-article"
-            * a class="article-title"
-            * div class="article-blurb"
+        * div class="home-content"
+            * a class="home-content-title"
+            * div class="home-blurb"
             * div class="home-comments"
-                * div class="top-comment"
+                * div class="home-comment"
                     * div class="commenter-profile-picture"
                     * div class="commenter-name"
                     * div class="comment-summary"
 * article.html
     * header
     * main
-        * div class="article"
-            * a class="article-title"
-            * ul class="article-metadata"
-            * div class="article-image"
-            * div class="article-body"
+        * div class="content"
+            * a class="content-title"
+            * ul class="content-metadata"
+            * div class="content-image"
+            * div class="article"
+        * div class="comments"
+            * div class="comments-header"
+            * div class="comment"
+                * div class="commenter-profile-picture"
+                * div class="commenter-name"
+                * div class="comment-content"
+* article2.html
+    * header
+    * main
+        * div class="content"
+            * a class="content-title"
+            * ul class="content-metadata"
+            * div class="video"
+            * div class="content-blurb"
         * div class="comments"
             * div class="comments-header"
             * div class="comment"
