@@ -1,19 +1,60 @@
+//JS
+(function() {
+  'use strict';
+  var snackbarContainer = document.querySelector('#demo-toast-example');
+  var showToastButton = document.querySelector('#submit');
+  showToastButton.addEventListener('click', function() {
+    'use strict';
+    var data = {message: 'Comment Posted'};
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+}());
+
+
+
+
+//Jquery
 $(document).ready(function() {
 
 //Variables
 var overlay = $("#overlay"),
         fab = $(".fab"),
      cancel = $("#cancel"),
-     submit = $("#submit");
-     textfield = document.getElementById('sample5');
-     comment = document.getElementById('new-comment0');
+     submit = $("#submit"),
+     textfield = document.getElementById('sample5'),
+     comment = document.getElementById('new-comment0'),
+     tocomments = $(".comment-button"),
+     commentboxwrapper = $('.commentboxwrapper'),
+     upvote = $('.upvote'),
+     downvote = $('.downvote'),
+     reply = $('.reply');
+     commentopen = 0
 
+
+
+commentboxwrapper.on('click', openComment)
+
+function openComment(event) {
+  if (commentopen == 0) {
+  upvote.addClass('active');
+  downvote.addClass('active');
+  reply.addClass('active');
+  commentopen = 1
+  }
+  else {
+  upvote.removeClass('active');
+  downvote.removeClass('active');
+  reply.removeClass('active');
+  commentopen = 0;
+  }
+
+}
 
 //fab click
 fab.on('click', openFAB);
 overlay.on('click', closeFAB);
 cancel.on('click', closeFAB);
-
+tocomments.on('click', openFAB);
 
 
 
@@ -25,6 +66,7 @@ function openFAB(event) {
   $('.mdl-button__ripple-container').hide();
   overlay.addClass('dark-overlay');
 
+  //$('#sample5')[0].scrollIntoView()
 }
 
 function closeFAB(event) {
@@ -68,6 +110,8 @@ function create_comment() {
   commentcontent.innerHTML = textfield.value;
 
   i++;
+
+  closeFAB();
 }
 
 

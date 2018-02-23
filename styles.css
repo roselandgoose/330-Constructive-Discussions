@@ -181,6 +181,34 @@ main {
 }
 
 /* Content Page Comments */
+.commentboxwrapper {
+    cursor: pointer;
+}
+
+
+.upvote {
+    display: none;
+}
+
+.downvote {
+    display: none;
+}
+
+.reply {
+    display: none;
+}
+
+.active.upvote {
+    display: block;
+}
+
+.downvote.active {
+    display: block;
+}
+
+.reply.active {
+    display: block;
+}
 
 .comments {
     height: 98%;
@@ -188,6 +216,18 @@ main {
     padding: 20px;
 
     overflow-y: scroll;
+}
+
+#hr {
+    width:100%;
+}
+
+#uparrow {
+    color: green;
+}
+
+#downarrow {
+    color: red;
 }
 
 #view-source {
