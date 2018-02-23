@@ -27,12 +27,15 @@ var overlay = $("#overlay"),
      commentboxwrapper = $('.commentboxwrapper'),
      upvote = $('.upvote'),
      downvote = $('.downvote'),
-     reply = $('.reply');
+     reply = $('.reply'),
+     seemore = $('.seemore'),
+     upvotescore = $('#upvotescore'),
+     score = 0
      commentopen = 0
 
 
 
-commentboxwrapper.on('click', openComment)
+seemore.on('click', openComment)
 
 function openComment(event) {
   if (commentopen == 0) {
@@ -40,14 +43,30 @@ function openComment(event) {
   downvote.addClass('active');
   reply.addClass('active');
   commentopen = 1
+  seemore.html('See Less');
   }
   else {
   upvote.removeClass('active');
   downvote.removeClass('active');
   reply.removeClass('active');
   commentopen = 0;
+  seemore.html('See More');
   }
 
+}
+
+upvote.on('click', upscore)
+
+function upscore(event) {
+  score++;
+  upvotescore.html("Upvote Score: " + score);
+}
+
+downvote.on('click', downscore)
+
+function downscore(event) {
+  score--;
+  upvotescore.html("Upvote Score: " + score);
 }
 
 //fab click
