@@ -25,13 +25,17 @@ var overlay = $("#overlay"),
      comment = document.getElementById('new-comment0'),
      tocomments = $(".comment-button"),
      commentboxwrapper = $('.commentboxwrapper'),
-     upvote = $('.upvote'),
-     downvote = $('.downvote'),
+     upvote = $('.upvote0'),
+     downvote = $('.downvote0'),
      reply = $('.reply'),
      seemore = $('.seemore'),
      upvotescore = $('#upvotescore'),
      score = 0
      commentopen = 0
+     upvote1 = $('.upvote1'),
+     downvote1 = $('.downvote1'),
+     upvotescore1 = $('#upvotescore1'),
+     score1 = 0;
 
 
 
@@ -67,6 +71,20 @@ downvote.on('click', downscore)
 function downscore(event) {
   score--;
   upvotescore.html("Upvote Score: " + score);
+}
+
+upvote1.on('click', upscore1)
+
+function upscore1(event) {
+  score1++;
+  upvotescore1.html("Upvote Score: " + score1);
+}
+
+downvote1.on('click', downscore1)
+
+function downscore1(event) {
+  score1--;
+  upvotescore1.html("Upvote Score: " + score1);
 }
 
 //fab click

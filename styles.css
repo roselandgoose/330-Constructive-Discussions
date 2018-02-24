@@ -85,6 +85,20 @@ main {
 /*
  * Home Page
  */
+
+/*
+ .header {
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('./news.jpg');
+
+}
+*/
+
+
 .title {
     font-family: 'Abril Fatface', cursive !important;
 }
@@ -196,14 +210,19 @@ main {
 
 /* Content Page Comments */
 
-
+.buttongrid {
+    margin: 0;
+    width: 100%;
+}
 
 .upvote {
     display: none;
+    color: green;
 }
 
 .downvote {
     display: none;
+    color: red;
 }
 
 .reply {
