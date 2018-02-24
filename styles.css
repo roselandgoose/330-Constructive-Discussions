@@ -85,6 +85,20 @@ main {
 /*
  * Home Page
  */
+.title {
+    font-family: 'Abril Fatface', cursive !important;
+}
+
+.top {
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    font-style: italic;
+}
+
+.headline {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+}
 
 .home-content .home-content-title {
     padding-bottom: 4px !important;
