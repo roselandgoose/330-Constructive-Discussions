@@ -86,18 +86,24 @@ main {
  * Home Page
  */
 
-/*
+
  .header {
-    background:
+
+    background-color: transparent !important;
+}
+
+.contentclass {
+    background: 
     linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
-      ),
-      url('./news.jpg');
-
+    ),
+    url('./roman-kraft-260082-unsplash.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
 }
-*/
-
 
 .title {
     font-family: 'Abril Fatface', cursive !important;
