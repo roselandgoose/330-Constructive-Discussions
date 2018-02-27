@@ -23,6 +23,15 @@ BTW. I have a script in all the headers that integrates with my editor for live 
         * [ ] Font
         * [ ] Consistence and attractive allignment
 * P7:
+    Deliverables:
+        Profile Page - Eddy Lin / George Mao
+        Comments reply threading - George Pan
+        Fonts / Background pic - George Mao
+        Create Profile Page - Keith
+        Video page comments consistency 
+
+
+
     * [ ] Make page reactive to screen size
         * [x] Article page Desktop/Tablet
         * [x] Home page Desktop/Tablet
