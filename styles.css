@@ -332,3 +332,7 @@ main {
       right: 10;
       bottom: 0;
   }
+
+  .FontKarma {
+    font-family: 'Karma', serif;
+  }
