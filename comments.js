@@ -62,31 +62,62 @@ function openComment(event) {
 upvote.on('click', upscore)
 
 function upscore(event) {
-  score++;
+  if (score < 1) {
+  score = 1;
   upvotescore.html("Upvote Score: " + score);
+  }
+  else if (score == 1){
+  score = 0
+  upvotescore.html('Upvote Score: ' + score);
+  }
+  else {
+  score = 0;
+  upvotescore.html('Upvote Score: ' + score);
+  }
 }
 
 downvote.on('click', downscore)
 
 function downscore(event) {
-  score--;
+  if (score > -1) {
+  score  = -1;
   upvotescore.html("Upvote Score: " + score);
+  }
+  else {
+    score = 0;
+    upvotescore.html('Upvote Score: ' + score);
+  }
 }
 
 upvote1.on('click', upscore1)
 
 function upscore1(event) {
-  score1++;
+  if (score1 < 1) {
+  score1 = 1;
   upvotescore1.html("Upvote Score: " + score1);
+  }
+  else if (score1 == 1){
+  score1 = 0
+  upvotescore1.html('Upvote Score: ' + score1);
+  }
+  else {
+  score1 = 0;
+  upvotescore1.html('Upvote Score: ' + score1);
+  }
 }
 
 downvote1.on('click', downscore1)
 
 function downscore1(event) {
-  score1--;
+  if (score1 > -1) {
+  score1  = -1;
   upvotescore1.html("Upvote Score: " + score1);
+  }
+  else {
+    score1 = 0;
+    upvotescore1.html('Upvote Score: ' + score1);
+  }
 }
-
 //fab click
 fab.on('click', openFAB);
 overlay.on('click', closeFAB);
