@@ -358,6 +358,7 @@ main {
       right: 10;
       bottom: 0;
   }
+
   /*
     Profile Page
   */
@@ -399,3 +400,25 @@ main {
   .FontKarma {
     font-family: 'Karma', serif;
   }
+
+  /*
+    Create Profile Page
+  */
+
+.df-wrapper {
+    padding: 0px !important;
+}
+
+div [class^="datefield-"] {
+    width: 11%;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 2px;
+}
+
+.df-submit_wrapper {
+    width: 310px;
+}
+.df-submit {
+    float: right;
+}

@@ -1,0 +1,164 @@
+<!-- Uses a transparent header that draws on top of the layout's background -->
+<html>
+
+    <head>
+        <title>
+            Profile
+        </title> 
+
+        <!-- Styling -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Franklin:900" rel="stylesheet">
+        
+        <!-- Material Design Lite -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <!-- DEVELOPMENT CODE - Auto Reloading -->
+        <script src='http://127.0.0.1:9001/js/socket.js'></script>
+
+        <!-- Responsive Design - Media Queries-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="mdl-layout mdl-js-layout">
+            <header class="header mdl-layout__header mdl-layout--fixed-header mdl-layout__header-row">
+
+                <!-- Title -->
+                <a class="mdl-navigation__link" href="index.html">
+                    <span class="title mdl-layout-title">
+                        CONSTRUCTIVE DISCUSSIONS
+                    </span>
+                </a>
+
+                <!-- To align search and profile to right -->
+                <div class = "mdl-layout-spacer"></div>
+
+                <!-- Expandable Search Bar -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-field">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="expando1">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="expando1">
+                        <label class="mdl-textfield__label" for="expando1">Expandable text field</label>
+                    </div>
+                </div>
+
+                <!-- Profile Icon -->
+                <a class="mdl-navigation__link" href="profile.html">
+                    <img class = "profile_icon" src = "images/female_image.png">
+                </a>
+
+            </header> <!-- Closes Header Row -->
+
+            <main class="mdl-layout__content">
+        		<div class = "profile_wrapper"> 
+                	<img class = "profile_pic" src = "images/female_image.png">
+                    <a href="">
+                        <h5> Change Avatar </h5>
+                    </a>
+                </div>
+
+                <div class = "right_wrapper">
+                    <div class = "form_wrapper">
+
+                        <h3> Create New Account </h3>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Name</label>
+                            </div>
+                        </form>
+
+                        <div class="mdl-grid df-wrapper">
+
+                            <form class="datefield-label">
+                            <div class="mdl-textfield">
+                                <label class="mdl-textfield__label" for="sample1">Born on</label>
+                            </div>
+                            </form>
+
+                            <!-- Numeric Textfield with Floating Label -->
+                            <form action="#" class="datefield-day">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                                <label class="mdl-textfield__label" for="sample4">Day</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                              </div>
+                            </form>
+                            
+                            <form action="#" class="datefield-month">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Month</label>
+                                </div>
+                            </form>
+
+                            <!-- Numeric Textfield with Floating Label -->
+                            <form action="#" class="datefield-year">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                                <label class="mdl-textfield__label" for="sample4">Year</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                              </div>
+                            </form>
+                        </div>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Hometown</label>
+                            </div>
+                        </form>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="email" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">E-mail</label>
+                                <span class="mdl-textfield__error">Input is not a valid E-mail address!</span>
+                            </div>
+                        </form>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Username</label>
+                            </div>
+                        </form>
+                        
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="password" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Password</label>
+                            </div>
+                        </form>
+
+                        <form action="#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="password" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">Retype Password</label>
+                            </div>
+                        </form>
+
+                        <div class="df-submit_wrapper">
+                            <!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent df-submit">
+                              Submit
+                            </button>
+                        </div>
+
+                	</div>
+                </div>
+            </main>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="create_profile.js"></script>
+    </body>
+</html>
