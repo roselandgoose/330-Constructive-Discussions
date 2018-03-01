@@ -358,8 +358,6 @@ main {
       right: 10;
       bottom: 0;
   }
-
-<<<<<<< HEAD
   /*
     Profile Page
   */
@@ -381,8 +379,7 @@ main {
     margin-left: 50px;
     text-align: left;
     float: left;
-=======
+  }
   .FontKarma {
     font-family: 'Karma', serif;
->>>>>>> 85542e60cfe45bfdc6fb25d3c3e1d767512a48c7
   }
