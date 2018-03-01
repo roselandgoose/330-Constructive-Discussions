@@ -105,6 +105,11 @@ main {
     
 }
 
+.mainclass {
+  margin-left: 0 !important;
+  padding: none;
+}
+
 .title {
     font-family: 'Abril Fatface', cursive !important;
 }
@@ -331,4 +336,27 @@ main {
       position: relative;
       right: 10;
       bottom: 0;
+  }
+
+  /*
+    Profile Page
+  */
+
+  .profile_wrapper{
+    margin-left: 300px;
+    width: 250px;
+    text-align: left;
+    padding-top: 50px;
+    float: left;
+  }
+
+  .profile_pic{
+    height: 250px;
+  }
+
+  .info_wrapper{
+    padding-top: 50px;
+    margin-left: 50px;
+    text-align: left;
+    float: left;
   }
