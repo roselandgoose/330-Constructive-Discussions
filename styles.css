@@ -397,8 +397,21 @@ main {
     padding-top: 58px;
   }
 
-  .FontKarma {
-    font-family: 'Karma', serif;
+  .FontBaskervilleTitle {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 100%;
+    font-weight: bold;
+    font-size:  30pt;
+  }
+  .FontBaskervilleTitleMini {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 150%;
+    font-weight: bold;
+    font-size:  20pt;
+  }
+
+   .FontMalarText {
+    font-family: 'Mukta Malar', sans-serif;
   }
 
   /*
