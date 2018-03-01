@@ -1,3 +1,7 @@
+
+
+
+
 //JS
 (function() {
   'use strict';
@@ -9,6 +13,8 @@
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
   });
 }());
+
+
 
 
 
@@ -27,7 +33,7 @@ var overlay = $("#overlay"),
      commentboxwrapper = $('.commentboxwrapper'),
      upvote = $('.upvote0'),
      downvote = $('.downvote0'),
-     reply = $('.reply'),
+     reply = $('#reply'),
      seemore = $('.seemore'),
      upvotescore = $('#upvotescore'),
      score = 0
@@ -62,31 +68,63 @@ function openComment(event) {
 upvote.on('click', upscore)
 
 function upscore(event) {
-  score++;
+  if (score < 1) {
+  score = 1;
   upvotescore.html("Upvote Score: " + score);
+  }
+  else if (score == 1){
+  score = 0
+  upvotescore.html('Upvote Score: ' + score);
+  }
+  else {
+  score = 0;
+  upvotescore.html('Upvote Score: ' + score);
+  }
 }
 
 downvote.on('click', downscore)
 
 function downscore(event) {
-  score--;
+  if (score > -1) {
+  score  = -1;
   upvotescore.html("Upvote Score: " + score);
+  }
+  else {
+    score = 0;
+    upvotescore.html('Upvote Score: ' + score);
+  }
 }
 
 upvote1.on('click', upscore1)
 
 function upscore1(event) {
-  score1++;
+  if (score1 < 1) {
+  score1 = 1;
   upvotescore1.html("Upvote Score: " + score1);
+  }
+  else if (score1 == 1){
+  score1 = 0
+  upvotescore1.html('Upvote Score: ' + score1);
+  }
+  else {
+  score1 = 0;
+  upvotescore1.html('Upvote Score: ' + score1);
+  }
 }
 
 downvote1.on('click', downscore1)
 
 function downscore1(event) {
-  score1--;
+  if (score1 > -1) {
+  score1  = -1;
   upvotescore1.html("Upvote Score: " + score1);
+  }
+  else {
+    score1 = 0;
+    upvotescore1.html('Upvote Score: ' + score1);
+  }
 }
-
+/*
 //fab click
 fab.on('click', openFAB);
 overlay.on('click', closeFAB);
@@ -120,7 +158,7 @@ function closeFAB(event) {
     $('.mdl-textfield').removeClass('is-dirty');
     
   }
-
+*/
 // Post button
 submit.on('click', create_comment);
 
@@ -131,6 +169,7 @@ function create_comment() {
     event.preventDefault();
     event.stopImmediatePropagation();
   }
+
 
   var proto = $('#new-comment0').clone();
   proto.attr('id', 'new-comment' + i);
@@ -144,15 +183,52 @@ function create_comment() {
 
   commentername.innerHTML = 'Me';
 
-  commentcontent.innerHTML = textfield.value;
+  commentcontent.innerHTML = sample5.value;
+
+  'use strict';	
+  modal.style.display = "none";
+  sample5.value = '';
+  textbox.classList.remove('is-dirty');
+
+  $('#new-comment' + i)[0].scrollIntoView()
 
   i++;
+}
 
-  closeFAB();
+reply.on('click', replyf);
+
+function replyf() {
+  
 }
 
 
 
 
-
 })
+
+
+/* new comments */
+
+var modal = document.getElementById('mdl-custom-modal');
+var	btn = document.getElementById("mdl-custom-btn");
+var close = document.getElementById("closer");
+var sample5 = document.getElementById('sample5');
+var textbox = document.getElementsByClassName('mdl-textfield')[1];
+var submit = document.getElementById('submit');
+
+
+
+
+btn.onclick = function() {
+	'use strict';
+	modal.style.display = "block";
+}
+
+close.onclick = function() {
+  'use strict';	
+  modal.style.display = "none";
+  sample5.value = '';
+  textbox.classList.remove('is-dirty');
+}
+
+/* end new comments */

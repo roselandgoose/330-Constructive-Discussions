@@ -221,6 +221,27 @@ main {
 
 /* Content Page Comments */
 
+/* New comments */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-content {
+	margin: 10% auto;
+	border-radius:5px
+}
+/* new comments end */
+
+
 .buttongrid {
     margin: 0;
     width: 100%;
@@ -338,6 +359,7 @@ main {
       bottom: 0;
   }
 
+<<<<<<< HEAD
   /*
     Profile Page
   */
@@ -359,4 +381,8 @@ main {
     margin-left: 50px;
     text-align: left;
     float: left;
+=======
+  .FontKarma {
+    font-family: 'Karma', serif;
+>>>>>>> 85542e60cfe45bfdc6fb25d3c3e1d767512a48c7
   }
