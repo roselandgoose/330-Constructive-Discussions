@@ -387,8 +387,9 @@ main {
     width: 650px;
     text-align: left;
     float: left;
-    font-size: 25px;
+    font-size: 30pt;
     line-height: 40px;
+    font-family: 'Mukta Malar', sans-serif;
   }
 
   .com_wrapper{
@@ -396,6 +397,7 @@ main {
     text-align: left;
     float: left;
     padding-top: 58px;
+    font-family: 'Mukta Malar', sans-serif;
   }
 
   .FontBaskervilleTitle {
@@ -413,6 +415,10 @@ main {
 
    .FontMalarText {
     font-family: 'Mukta Malar', sans-serif;
+  }
+   .FontMalarTextLarge {
+    font-family: 'Mukta Malar', sans-serif;
+    font-size: 30pt;
   }
 
   /*
