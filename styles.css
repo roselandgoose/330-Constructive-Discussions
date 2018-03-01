@@ -371,15 +371,31 @@ main {
   }
 
   .profile_pic{
-    height: 250px;
+    height: 200px;
+  }
+
+  .right_wrapper{
+    width: 650px;
+    float: left;
+    padding-top: 50px;
+    margin-left: 50px;
   }
 
   .info_wrapper{
-    padding-top: 50px;
-    margin-left: 50px;
+    width: 650px;
     text-align: left;
     float: left;
+    font-size: 25px;
+    line-height: 40px;
   }
+
+  .com_wrapper{
+    width: 650px;
+    text-align: left;
+    float: left;
+    padding-top: 58px;
+  }
+
   .FontKarma {
     font-family: 'Karma', serif;
   }
