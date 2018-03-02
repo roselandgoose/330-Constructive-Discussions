@@ -7,13 +7,13 @@ var loginn = document.getElementById('loginn');
 document.onload = checklog();
 
 function checklog(e) {
-    
+    var pic = $('#black');
     var state = sessionStorage.getItem('state');
 
   if (state == '1') {
     loginn.innerHTML = 'Log out';
     loginn.id = 'logoutind'
-    loginn.after('profile pic')
+    black.style.display = 'block';
 
     var logout = document.getElementById('logoutind');
 

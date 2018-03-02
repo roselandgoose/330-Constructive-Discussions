@@ -75,10 +75,42 @@
                     </div>
                 </div>
 
-                <!-- Profile Icon -->
-                <a class="mdl-navigation__link" id = "black" href="profile.html">
-                    <img class = "profile_icon" src = "images/female_image.png">
-                </a>
+                                <!-- Profile Icon -->
+                                <a class="mdl-navigation__link" id = "black" href="profile.html">
+                                    <img class = "profile_icon" src = "images/female_image.png">
+                                </a>
+
+                <button id='loginart' class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                    log in
+                  </button>
+                  <div id="mdl-custom-modal" class="modal2">
+                    <div class="modal-content2 mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            <form action="#" st>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="loginuser">
+                                    <label class="mdl-textfield__label" for="loginuser">Username</label>
+                                </div>
+                                </form>
+                            </div>
+                            <div class="mdl-card__title mdl-card--expand">
+                            <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="password" id="sample3">
+                                        <label class="mdl-textfield__label" for="sample3">Password</label>
+                                    </div>
+                                </form>
+                            </div>  
+                            <div class = 'loginbuttongrid mdl-grid'>
+                                <button id='loginbutart' class="mdl-cell mdl-cell--4-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                                    log in
+                                  </button>
+                                  <button id='logincancel' class="mdl-cell mdl-cell--4-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                                    cancel
+                                  </button>
+                                  </div>
+                            </div>
+                            </div>
             </header>
 
             <main class="mdl-layout__content mdl-grid">
@@ -106,36 +138,7 @@
                 </div>
 
                 <div class ="mdl-cell--top mdl-color--grey content mdl-shadow--4dp mdl-cell mdl-cell--5-col-desktop mdl-cell--8-col mdl-grid comments">
-                    <div class = "mdl-cell mdl-cell--8-col comments-header">
-                        <h5>Top Comments</h5>
-                    </div>
-                        
-                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <img src = "images/female_image.png" width=25px height=25px>
-                        </div>
-                        <div class="commenter-name">
-                            Jane Doe
-                        </div>
-                        <div class = "mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div id = "new-comment0" class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <img src = "images/male_image.png" width=25px height=25px>
-                        </div>
-                        <div class="commenter-name">
-                            John Doe
-                        </div>
-                        <div class = "mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div id = "overlay"></div>
-
+                    <!-- <div id = "overlay"></div>
                     <div class="fab mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
                         <i class="fab-icon material-icons">add</i>
 
@@ -154,9 +157,225 @@
                                 <button class="mdl-button mdl-js-button" id="cancel">Cancel</button>
                             </div>
                         </form>
-                    </div> <!-- Closes button -->
+                    </div> -->
 
-                </div> <!-- Closes comments -->
+                    <!-- new comments-->
+                    <a id="mdl-custom-btn" class="fab mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
+                        <i class="fab-icon material-icons">add</i>
+                    </a>
+                    
+                    <div id="mdl-custom-modal" class="modal">
+                        <div class="modal-content mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title mdl-card--expand">
+                                <form action="#" st>
+                                    <div class="mdl-textfield mdl-js-textfield">
+                                        <textarea class="mdl-textfield__input" type="text" rows= "5" id="sample5" ></textarea>
+                                        <label class="FontMalarText mdl-textfield__label" for="sample5">Comment Here</label>
+                                    </div>
+                                    <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="^[\s()+-]*([0-9][\s()+-]*){6,20}$" id="mdl-phone">
+                                        <label class="mdl-textfield__label" for="mdl-phone">Phone...</label>
+                                        <span class="mdl-textfield__error">Input is not a number!</span>
+                                    </div> -->
+                                </form>
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <a id = 'submit' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                    Submit
+                                </a>
+                            </div>
+                            <div class="mdl-card__menu">
+                                <button id = 'closer' class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-custom-close">
+                                  <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- new comments end -->
+
+                    <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
+                        <h5>Top Comments</h5>
+                    </div>
+                    <hr id = "hr" />
+                  
+                
+                   <div id='top1' class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/female_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            Jane Doe
+                            <div class = "score"></div>
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            I believe immigration is a part of the American Dream!
+                        </div>
+
+                        <div class = "buttongrid mdl-grid">
+                        <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
+
+
+                        </div>
+
+                        <button class="upvote upvote0 active mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
+                            <i id = "uparrow" class="material-icons">arrow_upward</i>
+                    </button>
+
+                    <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
+                            <i id = "downarrow" class="material-icons">arrow_downward</i>
+                    </button>
+
+
+                    <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
+                        Reply
+                      </button>
+
+                        <!-- DONT DELETE THIS CONTENT / I want to keep it in case we want to go back to it
+
+
+                        <div id = "upvotescore">Upvote Score: 0</div>
+                        <div class = "mdl-card__actions">
+                            <button class = 'seemore mdl-button mdl-js-button'>see more</button>
+                        </div>
+
+                        <button class="upvote mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
+                            <i id = "uparrow" class="material-icons">arrow_upward</i>
+                          </button>
+                          <button class="downvote mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
+                            <i id = "downarrow" class="material-icons">arrow_downward</i>
+                          </button>
+
+                          <div class = "mdl-cell mdl-cell--5-col"></div>
+
+                          <button class="reply mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-cell mdl-cell--3-col">
+                            Reply
+                          </button>
+                        
+                        -->
+
+
+
+                    </div> <!-- Closes comment -->
+
+                    <div class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                            <div class = "commenter-profile-picture">
+                                <img src = "images/female_image.png" width=25px height=25px>
+                            </div>
+                            <div class="FontMalarText commenter-name">
+                                Jane Doe
+                                <div class = "score"></div>
+                            </div>
+                            <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                                Comment content goes here
+                            </div>
+    
+                            <div class = "buttongrid mdl-grid">
+                                <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
+        
+        
+                                </div>
+        
+                                <button class="upvote upvote0 active mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
+                                    <i id = "uparrow" class="material-icons">arrow_upward</i>
+                            </button>
+        
+                            <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
+                                    <i id = "downarrow" class="material-icons">arrow_downward</i>
+                            </button>
+        
+        
+                            <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
+                                Reply
+                              </button>
+                    </div> <!-- Closes comment -->
+
+                    <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
+                        <h5>Comments</h5>
+                    </div>
+                    <hr id = "hr" />
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/female_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            Jane Doe
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                        </div>
+                    </div> <!-- Closes comment -->
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/female_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            Jane Doe
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                        </div>
+                    </div> <!-- Closes comment -->
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/female_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            Jane Doe
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                        </div>
+                    </div> <!-- Closes comment -->
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/female_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            Jane Doe
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                        </div>
+                    </div> <!-- Closes comment -->
+
+                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/female_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            Jane Doe
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                        </div>
+                    </div> <!-- Closes comment -->
+
+                    <div id = "new-comment0" class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <img src = "images/male_image.png" width=25px height=25px>
+                        </div>
+                        <div class="FontMalarText commenter-name">
+                            John Doe
+                        </div>
+                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                            Comment content goes here
+                        </div>
+                    </div> <!-- Closes comment -->
+
+
+               
+
+
+            <!-- snackbar -->       
+            <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+                <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+            </div>
+
 
             </main>
         </div> <!-- Closes mdl-layout -->

@@ -1,7 +1,5 @@
 
 
-
-
 //JS
 (function() {
   'use strict';
@@ -195,10 +193,74 @@ function create_comment() {
   i++;
 }
 
-reply.on('click', replyf);
+reply.on('click', replyg);
+
+function replyg() {
+
+}
+
+var j = 2;
 
 function replyf() {
+  var top1 = $('#top1');
+  var proto = $('#newcomment0').clone();
+  proto.attr('id', 'top' + j);
+  $('#top'+ (j-1)).after(proto);
+
+}
+
+var loginn = document.getElementById('loginart');
+
+
+document.onload = checklog();
+
+function checklog(e) {
+    
+    var state = sessionStorage.getItem('state');
+    var pic = $('#black');
+
+  if (state == '1') {
+    loginn.innerHTML = 'Log out';
+    loginn.id = 'logoutart';
+    black.style.display = 'block';
+
+    var logout = document.getElementById('logoutart');
+
+    logout.onclick = function() {
+      sessionStorage.setItem('state', '0');
+      location.reload();
+    }
+
+  }
+
+  else {
+    var login = document.getElementsByClassName('login')[0];
+    var modal = $('.modal2')[0];
+    var cancel = document.getElementById('logincancel');
+
+    login.onclick = function() {
+        'use strict';
+        modal.style.display = "block";
+    }
+
+    cancel.onclick = function() {
+        modal.style.display = 'none';
+    }
+  }
   
+}
+
+
+var loginbutart = document.getElementById('loginbutart');
+var modal = $('.modal2')[0];
+
+loginbutart.onclick = function() {
+    'use strict';	
+    modal.style.display = "none";
+
+    sessionStorage.setItem('state', '1');
+
+    location.reload();
 }
 
 

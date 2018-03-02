@@ -36,6 +36,7 @@ main {
 
 #black {
     color: black;
+    display: none;
 }
 
 #profile {
@@ -61,6 +62,43 @@ main {
     height: 40px;
     width: 40px;
 }
+
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-content2 {
+	margin: 10% auto;
+    border-radius:5px;
+    width: 330px;
+    height: 282px;
+
+}
+
+.loginbuttongrid {
+    margin: 0px !important;
+}
+
 
 /* Global Comments */
 
@@ -195,14 +233,10 @@ main {
 /* Article Image */
 
  .demo-card-image.mdl-card {
-  height: 500px;
+    min-height: 300px;
   background: url('images/lead_960.jpg') center / cover;
 }
-.demo-card-image > .mdl-card__actions {
-  height: 52px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
-}
+
 .demo-card-image__filename {
   color: #fff;
   font-size: 14px;
