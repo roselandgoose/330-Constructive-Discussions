@@ -18,6 +18,14 @@
  * Global
  */
 
+body {
+    font-family:'Mukta Malar', sans-serif !important;
+}
+
+.mdl-button {
+    font-family: 'Mukta Malar', sans-serif !important;
+}
+
 main {
     height: 100%;
 }
