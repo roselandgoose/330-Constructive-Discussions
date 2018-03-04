@@ -207,6 +207,7 @@ function create_comment() {
   var commentcontent = divlist[2];
   var modal1 = document.getElementById('mdl-custom-modal1');
   var state = sessionStorage.getItem('state');
+  var commentboxer = $('#commentbox');
 
   if (state == 1) {commentername.innerHTML = 'JaneDoe123';}
   else if (state == 2) {commentername.innerHTML = 'JohnSmith456';}
@@ -217,7 +218,7 @@ function create_comment() {
   'use strict';	
   modal1.style.display = "none";
   sample5.value = '';
-  textbox.classList.remove('is-dirty');
+  commentboxer.removeClass('is-dirty');
 
   $('#new-comment' + i)[0].scrollIntoView()
 
@@ -334,19 +335,11 @@ loginbutart.onclick = function() {
     location.reload();
 }
 
-
-
-
-})
-
-
-/* new comments */
-
 var modal = document.getElementById('mdl-custom-modal1');
 var	btn = document.getElementById("mdl-custom-btn");
 var close = document.getElementById("closer");
 var sample5 = document.getElementById('sample5');
-var textbox = document.getElementsByClassName('mdl-textfield')[1];
+var textbox = $('#commentbox');
 var submit = document.getElementById('submit');
 
 
@@ -361,7 +354,15 @@ close.onclick = function() {
   'use strict';	
   modal.style.display = "none";
   sample5.value = '';
-  textbox.classList.remove('is-dirty');
+  textbox.removeClass('is-dirty');
 }
+
+
+})
+
+
+/* new comments */
+
+
 
 /* end new comments */
