@@ -1,2 +1,4 @@
 git pull
-cp *.html *.js *.jpg *.mp4 *.css ../
+cp *.html *.css LICENSE README.md ../
+cp -r js ../
+cp -r media ../
