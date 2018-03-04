@@ -202,7 +202,7 @@ main {
       ),
     url(media/capitol-hill.png);
     background-position: center;
-    background-size: 100%;
+    background-size: fill;
     background-repeat: no-repeat;
 }
 
