@@ -237,11 +237,15 @@ main {
     margin-top: 0px !important;
     margin-left: 0px !important;
     margin-bottom: 12px !important;
+
+    width: 100% !important;
 }
 
 #small-card2 {
     margin-left: 0px !important;
     margin-bottom: 0px !important;
+
+    width: 100% !important;
 }
 
 /*
