@@ -15,19 +15,28 @@
  */
 
 /*
- * Global
+ * Global Site Options
  */
 
 body {
     font-family:'Mukta Malar', sans-serif !important;
 }
 
-.mdl-button {
-    font-family: 'Mukta Malar', sans-serif !important;
-}
-
 main {
     height: 100%;
+}
+
+.contentclass {
+    background: 
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+    ),
+    url('./city.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 #view-source {
@@ -38,6 +47,16 @@ main {
     margin-right: 40px;
     margin-bottom: 40px;
     z-index: 900;
+}
+
+/* Global mdl-tweaks */
+
+.mdl-button {
+    font-family: 'Mukta Malar', sans-serif !important;
+}
+
+.mdl-layout__header-row {
+    width: 100%;
 }
 
 /* Global Header */
@@ -65,10 +84,6 @@ main {
     border-width: .5px;
     height: 75%;
     color: black;
-}
-
-.mdl-layout__header-row {
-    width: 100%;
 }
 
 .profile_icon {
@@ -141,24 +156,6 @@ main {
  .header {
 
     background-color: #061b3d !important;
-}
-
-.contentclass {
-    background: 
-    linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.2)
-    ),
-    url('./city.jpg');
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    
-}
-
-.mainclass {
-  margin-left: 0 !important;
-  padding: none;
 }
 
 .title {
@@ -341,16 +338,6 @@ main {
     color: red;
 }
 
-#view-source {
-    position: fixed;
-    display: block;
-    right: 0;
-    bottom: 0;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    z-index: 900;
-}
-
 .comments-bar {
     overflow-y: scroll;
     height: 98%;
@@ -367,92 +354,92 @@ main {
     height: 350px;
     box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35);
     top: 10%;
-  }
+}
 
- .active .fab-icon {
+.active .fab-icon {
     display: none;
-  }
-  
-  .active .protect {
+}
+
+.active .protect {
     background: none;
-  }
-  
-  .comment_wrapper {
+}
+
+.comment_wrapper {
     display: none;
-  }
-  
-  .active .comment_wrapper {
+}
+
+.active .comment_wrapper {
     margin: 10%;
     display: block;
     height: 75%;
     width: 200px;
-  }
-  
-  #comment_header {
+}
+
+#comment_header {
     position: absolute;
     width: 100%;
     background: #d35400;
-  }
-  
-  .comment_wrapper {
+}
+
+.comment_wrapper {
 
     height: 50px;
     width: 50px;
     color: #757575;
-  }
+}
 
-  .button_wrapper {
-      position: relative;
-      right: 10;
-      bottom: 0;
-  }
+.button_wrapper {
+    position: relative;
+    right: 10;
+    bottom: 0;
+}
 
-  /*
-    Profile Page
-  */
+/*
+Profile Page
+*/
 
-  .profile_wrapper{
+.profile_wrapper{
     margin-left: 300px;
     width: 300px;
     text-align: right;
     padding-top: 50px;
     float: left;
-  }
+}
 
-  .demo-card-square.mdl-card {
+.demo-card-square.mdl-card {
     width: 320px;
     height: 400px;
-  }
+}
 
-  #profile_background {
+#profile_background {
     color: #fff;
     background:
       url('images/female_image.png') #46B6AC;
       background-size: 100%;
-  }
+}
 
-  #profile_background2 {
+#profile_background2 {
     color: #fff;
     background:
       url('images/male_image.png') #46B6AC;
       background-size: 100%;
-  }
+}
 
-  #support{
+#support{
     padding: 8px;
     line-height: 30px;
     font-size: 20px;
-  }
+}
 
-  .right_wrapper{
+.right_wrapper{
     width: 650px;
     padding-top: 25px;
     float: left;
     margin-left: 50px;
     text-align: left;
-  }
+}
 
-  .info_wrapper{
+.info_wrapper{
     text-align: left;
     width: 650px;
     float: left;
@@ -460,42 +447,44 @@ main {
     line-height: 40px;
     /*font-family: 'Mukta Malar', sans-serif;*/
     padding-left: 8px;
-  }
+}
 
-  .com_wrapper{
+.com_wrapper{
     float: left;
     width: 650px;
     text-align: left;
     padding-top: 30px;
     font-family: 'Mukta Malar', sans-serif;
-  }
+}
 
-  .FontBaskervilleTitle {
+.FontBaskervilleTitle {
     font-family: 'Libre Baskerville', serif;
     line-height: 100%;
     font-weight: bold;
     font-size:  30pt;
-  }
-  .FontBaskervilleTitleMini {
+}
+
+.FontBaskervilleTitleMini {
     font-family: 'Libre Baskerville', serif;
     line-height: 150%;
     font-weight: bold;
     font-size:  20pt;
-  }
+}
 
-  .FontMalarText {
+.FontMalarText {
     font-family: 'Mukta Malar', sans-serif;
-  }
-  .FontMalarTextLarge {
+}
+
+.FontMalarTextLarge {
     font-family: 'Mukta Malar', sans-serif;
     font-size: 30pt;
-  }
+}
 
 
 
-  /*
-    Create Profile Page
-  */
+/*
+Create Profile Page
+*/
 
 .df-wrapper {
     padding: 0px !important;
@@ -511,6 +500,7 @@ div [class^="datefield-"] {
 .df-submit_wrapper {
     width: 310px;
 }
+
 .df-submit {
     float: right;
 }
