@@ -47,6 +47,11 @@ main {
     display: none;
 }
 
+#black1 {
+    color: black;
+    display: none;
+}
+
 #profile {
     border-style: solid;
     border-color: white;
@@ -135,7 +140,7 @@ main {
 
  .header {
 
-    /*background-color: transparent !important;*/
+    background-color: #061b3d !important;
 }
 
 .contentclass {
@@ -144,7 +149,7 @@ main {
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
     ),
-    url('./roman-kraft-260082-unsplash.jpg');
+    url('./city.jpg');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;

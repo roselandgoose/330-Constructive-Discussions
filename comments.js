@@ -218,6 +218,7 @@ function checklog(e) {
     
     var state = sessionStorage.getItem('state');
     var pic = $('#black');
+    var pic1 = document.getElementById('black1');
 
   if (state == '1') {
     loginn.innerHTML = 'Log out';
@@ -232,6 +233,22 @@ function checklog(e) {
     }
 
   }
+
+  else if (state == '2') {
+    loginn.innerHTML = 'Log out';
+    loginn.id = 'logoutart'
+    pic1.style.display = 'block';
+    
+
+    var logout = document.getElementById('logoutart');
+
+    logout.onclick = function() {
+      sessionStorage.setItem('state', '0');
+      location.reload();
+    }
+
+  }
+
 
   else {
     var login = document.getElementsByClassName('login')[0];
@@ -251,14 +268,37 @@ function checklog(e) {
 }
 
 
+(function() {
+  'use strict';
+  var snackbarContainer = document.querySelector('#demo-toast1');
+  var showToastButton = document.querySelector('#loginbutart');
+  showToastButton.addEventListener('click', function() {
+    'use strict';
+    var data = {message: 'Invalid username or password!'};
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+}()); 
+
+
+
 var loginbutart = document.getElementById('loginbutart');
 var modal = $('.modal2')[0];
 
 loginbutart.onclick = function() {
     'use strict';	
-    modal.style.display = "none";
 
-    sessionStorage.setItem('state', '1');
+    if (loginuser.value == 'user1')
+    {sessionStorage.setItem('state', '1');
+    modal.style.display = "none";}
+
+    else if (loginuser.value == 'user2')
+    {sessionStorage.setItem('state', '2');
+    modal.style.display = "none";}
+
+    else {
+      sessionStorage.setItem('state', '0');     
+      return;
+  }
 
     location.reload();
 }
