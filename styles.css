@@ -233,6 +233,17 @@ main {
     background-color: lightgrey !important; 
 }
 
+#small-card1 {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-bottom: 12px !important;
+}
+
+#small-card2 {
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+
 /*
  * Content Page
  */
