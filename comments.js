@@ -20,6 +20,33 @@
 //Jquery
 $(document).ready(function() {
 
+  var input1 = document.getElementById("loginuser");
+
+  // Execute a function when the user releases a key on the keyboard
+  input1.addEventListener("keyup", function(event) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Trigger the button element with a click
+      document.getElementById("loginbut").click();
+    }
+  });
+
+  var input2 = document.getElementById("sample3");
+
+  // Execute a function when the user releases a key on the keyboard
+  input2.addEventListener("keyup", function(event) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Trigger the button element with a click
+      document.getElementById("loginbutart").click();
+    }
+  });
+
+  
 //Variables
 var overlay = $("#overlay"),
         fab = $(".fab"),
@@ -178,13 +205,17 @@ function create_comment() {
   var divlist = commentbox.getElementsByTagName('div');
   var commentername = divlist[1];
   var commentcontent = divlist[2];
+  var modal1 = document.getElementById('mdl-custom-modal1');
+  var state = sessionStorage.getItem('state');
 
-  commentername.innerHTML = 'Me';
+  if (state == 1) {commentername.innerHTML = 'JaneDoe123';}
+  else if (state == 2) {commentername.innerHTML = 'JohnSmith456';}
+  else {commentername.innerHTML = 'Anon';}
 
   commentcontent.innerHTML = sample5.value;
 
   'use strict';	
-  modal.style.display = "none";
+  modal1.style.display = "none";
   sample5.value = '';
   textbox.classList.remove('is-dirty');
 
@@ -287,11 +318,11 @@ var modal = $('.modal2')[0];
 loginbutart.onclick = function() {
     'use strict';	
 
-    if (loginuser.value == 'user1')
+    if (loginuser.value == 'JaneDoe123')
     {sessionStorage.setItem('state', '1');
     modal.style.display = "none";}
 
-    else if (loginuser.value == 'user2')
+    else if (loginuser.value == 'JohnSmith456')
     {sessionStorage.setItem('state', '2');
     modal.style.display = "none";}
 
@@ -311,7 +342,7 @@ loginbutart.onclick = function() {
 
 /* new comments */
 
-var modal = document.getElementById('mdl-custom-modal');
+var modal = document.getElementById('mdl-custom-modal1');
 var	btn = document.getElementById("mdl-custom-btn");
 var close = document.getElementById("closer");
 var sample5 = document.getElementById('sample5');

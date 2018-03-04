@@ -2,7 +2,31 @@
 
 $(document).ready(function() {
 
+  var input1 = document.getElementById("loginuser");
 
+  // Execute a function when the user releases a key on the keyboard
+  input1.addEventListener("keyup", function(event) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Trigger the button element with a click
+      document.getElementById("loginbut").click();
+    }
+  });
+
+  var input2 = document.getElementById("passuser");
+
+  // Execute a function when the user releases a key on the keyboard
+  input2.addEventListener("keyup", function(event) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Trigger the button element with a click
+      document.getElementById("loginbut").click();
+    }
+  });
   
 
 var loginn = document.getElementById('loginn');
@@ -83,11 +107,11 @@ loginbut.onclick = function() {
     'use strict';	
 
 
-    if (loginuser.value == 'user1')
+    if (loginuser.value == 'JaneDoe123')
     {sessionStorage.setItem('state', '1');
     modal.style.display = "none";}
 
-    else if (loginuser.value == 'user2')
+    else if (loginuser.value == 'JohnSmith456')
     {sessionStorage.setItem('state', '2');
     modal.style.display = "none";}
 
