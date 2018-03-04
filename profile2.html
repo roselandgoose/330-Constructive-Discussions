@@ -1,0 +1,156 @@
+<!-- Uses a transparent header that draws on top of the layout's background -->
+<html>
+
+    <head>
+        <title>
+            Profile2
+        </title> 
+
+        <!-- Styling -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Franklin:900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karma|Libre+Baskerville|Merriweather|Mukta+Malar|Roboto+Slab" rel="stylesheet">
+        
+        <!-- Material Design Lite -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <!-- DEVELOPMENT CODE - Auto Reloading -->
+        <script src='http://127.0.0.1:9001/js/socket.js'></script>
+
+        <!-- Responsive Design - Media Queries-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="mdl-layout mdl-js-layout">
+            <header class="header mdl-layout__header mdl-layout--fixed-header mdl-layout__header-row">
+
+                <!-- Title -->
+                <a class="mdl-navigation__link" href="index.html">
+                    <span class="title mdl-layout-title">
+                        CONSTRUCTIVE DISCUSSIONS
+                    </span>
+                </a>
+
+                <!-- To align search and profile to right -->
+                <div class = "mdl-layout-spacer"></div>
+
+                <!-- Expandable Search Bar -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search-field">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="expando1">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" id="expando1">
+                        <label class="mdl-textfield__label" for="expando1">Expandable text field</label>
+                    </div>
+                </div>
+
+                <!-- Profile Icon -->
+                <a class="mdl-navigation__link" href="profile.html">
+                    <img class = "profile_icon" src = "images/male_image.png">
+                </a>
+                
+                <button id='logoutprof' class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                    log out
+                  </button>
+
+            </header> <!-- Closes Header Row -->
+
+            <main class="mdl-layout__content">
+                <div class = "FontMalarText profile_wrapper"> 
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title1 mdl-card--expand">
+                      </div>
+                      <div class="mdl-card__supporting-text">
+                        <div> JohnSmith456 </div>
+                        <div> Joined: January 2017 </div>
+                      </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                          Update Profile
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class = "right_wrapper">
+                    <div class = "info_wrapper">
+                        <div> Name: John Smith </div>
+                        <div> Age: 30 </div>
+                        <div> Hometown: Chicago, Illinois </div>
+                    </div>
+
+                    <div class = "com_wrapper">
+
+                        <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
+                            <h5> Top Comments</h5>
+                        </div>
+                        <hr id = "hr" />
+
+                        <div class="FontMalarText mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                            <div class = "commenter-profile-picture">
+                                <img src = "images/male_image.png" width=25px height=25px>
+                            </div>
+                            <div class="commenter-name">
+                                John Smith
+                            </div>
+                            <div class = "mdl-card__supporting-text comment-summary">
+                                Trump's recent collusion with his mates regarding steel trades is absolutely disgusting
+                            </div>
+                        </div> <!-- Closes comment -->
+
+                        <div class="FontMalarText mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                            <div class = "commenter-profile-picture">
+                                <img src = "images/male_image.png" width=25px height=25px>
+                            </div>
+                            <div class="commenter-name">
+                                John Smith
+                            </div>
+                            <div class = "mdl-card__supporting-text comment-summary">
+                                Comment content goes here
+                            </div>
+                        </div> <!-- Closes comment -->
+                    </div>
+
+                    <div class = "FontMalarText com_wrapper">
+
+                        <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
+                            <h5> Recent Activity </h5>
+                        </div>
+                        <hr id = "hr" />
+
+                        <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                            <div class = "commenter-profile-picture">
+                                <img src = "images/male_image.png" width=25px height=25px>
+                            </div>
+                            <div class="FontMalarText commenter-name">
+                                John Smith
+                            </div>
+                            <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                                Trump's recent collusion with his mates regarding steel trades is absolutely disgusting
+                            </div>
+                        </div> <!-- Closes comment -->
+
+                        <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                            <div class = "commenter-profile-picture">
+                                <img src = "images/male_image.png" width=25px height=25px>
+                            </div>
+                            <div class="FontMalarText commenter-name">
+                                John Smith
+                            </div>
+                            <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+                                Comment content goes here
+                            </div>
+                        </div> <!-- Closes comment -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script src = 'loginprof.js'></script>
+</html>

@@ -408,10 +408,35 @@ main {
 
   .profile_wrapper{
     margin-left: 300px;
-    width: 250px;
-    text-align: left;
+    width: 300px;
+    text-align: right;
     padding-top: 50px;
     float: left;
+  }
+
+  .demo-card-square.mdl-card {
+    width: 320px;
+    height: 400px;
+  }
+
+  .mdl-card__title {
+    color: #fff;
+    background:
+      url('images/female_image.png') #46B6AC;
+      background-size: 100%;
+  }
+
+  .mdl-card__title1 {
+    color: #fff;
+    background:
+      url('images/male_image.png') #46B6AC;
+      background-size: 100%;
+  }
+
+  .mdl-card__supporting-text{
+    padding: 8px !important;
+    line-height: 30px !important;
+    font-size: 20px !important;
   }
 
   .profile_pic{
@@ -423,21 +448,24 @@ main {
     float: left;
     padding-top: 50px;
     margin-left: 50px;
+    text-align: left;
   }
 
   .info_wrapper{
-    width: 650px;
     text-align: left;
+    width: 650px;
+    background-color: #dce1ea;
     float: left;
-    font-size: 30pt;
-    line-height: 40px;
+    font-size: 20pt;
+    line-height: 45px;
     font-family: 'Mukta Malar', sans-serif;
+    padding-left: 10px;
   }
 
   .com_wrapper{
+    float: left;
     width: 650px;
     text-align: left;
-    float: left;
     padding-top: 58px;
     font-family: 'Mukta Malar', sans-serif;
   }
@@ -455,13 +483,15 @@ main {
     font-size:  20pt;
   }
 
-   .FontMalarText {
+  .FontMalarText {
     font-family: 'Mukta Malar', sans-serif;
   }
-   .FontMalarTextLarge {
+  .FontMalarTextLarge {
     font-family: 'Mukta Malar', sans-serif;
     font-size: 30pt;
   }
+
+
 
   /*
     Create Profile Page
