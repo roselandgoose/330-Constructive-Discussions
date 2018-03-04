@@ -32,7 +32,7 @@ main {
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
     ),
-    url('./city.jpg');
+    url('./media/city.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -188,7 +188,7 @@ main {
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
       ),
-    url(images/lead_960.jpg);
+    url(media/lead_960.jpg);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -200,7 +200,7 @@ main {
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
       ),
-    url(images/capitol-hill.png);
+    url(media/capitol-hill.png);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -244,7 +244,7 @@ main {
 
  .demo-card-image.mdl-card {
     min-height: 300px;
-  background: url('images/lead_960.jpg') center / cover;
+  background: url('media/lead_960.jpg') center / cover;
 }
 
 .demo-card-image__filename {
@@ -414,14 +414,14 @@ Profile Page
 #profile_background {
     color: #fff;
     background:
-      url('images/female_image.png') #46B6AC;
+      url('media/female_image.png') #46B6AC;
       background-size: 100%;
 }
 
 #profile_background2 {
     color: #fff;
     background:
-      url('images/male_image.png') #46B6AC;
+      url('media/male_image.png') #46B6AC;
       background-size: 100%;
 }
 
