@@ -39,6 +39,10 @@ main {
     
 }
 
+.mdl-textfield {
+    margin-right: 10px !important;
+}
+
 #view-source {
     position: fixed;
     display: block;

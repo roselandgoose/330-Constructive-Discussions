@@ -90,7 +90,7 @@ function checklog(e) {
 
 (function() {
   'use strict';
-  var snackbarContainer = document.querySelector('#demo-toast1');
+  var snackbarContainer = document.querySelector('#toast-2');
   var showToastButton = document.querySelector('#loginbut');
   showToastButton.addEventListener('click', function() {
     'use strict';
