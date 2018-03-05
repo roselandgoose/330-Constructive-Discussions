@@ -260,6 +260,10 @@ main {
     overflow-y: scroll;
 }
 
+#article1contentwrapper {
+    padding: 20px;
+}
+
 /* Article Image */
 
  .demo-card-image.mdl-card {
