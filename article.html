@@ -80,15 +80,13 @@
                     </div>
                 </div>
 
-                                <!-- Profile Icon -->
-                                <a class="mdl-navigation__link" id = "black" href="profile.html">
-                                    <!-- <img class = "profile_icon" src = "media/female_image.png"> -->
-                                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
-                                </a>
-                                <a class="mdl-navigation__link" id = "black1" href="profile2.html">
-                                    <!-- <img class = "profile_icon" src = "media/male_image.png"> -->
-                                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
-                                </a>
+                <!-- Profile Icon -->
+                <a class="mdl-navigation__link" id = "black" href="profile.html">
+                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
+                </a>
+                <a class="mdl-navigation__link" id = "black1" href="profile2.html">
+                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
+                </a>
 
                 <button id='loginart' class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
                     log in
@@ -128,10 +126,11 @@
 
                 <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-card mdl-color--white mdl-shadow--4dp content">
                         <h3 class = "headline">
-                    <a class = "FontBaskervilleTitle content-title" href="https://www.theatlantic.com/politics/archive/2018/02/house-conservatives-revolt-over-immigration/553283/?utm_source=feed">
-                      House Conservatives Revolt Over Immigration
-                    </a>
-                </h3>
+                        <a class = "FontBaskervilleTitle content-title" href="https://www.theatlantic.com/politics/archive/2018/02/house-conservatives-revolt-over-immigration/553283/?utm_source=feed">
+                              House Conservatives Revolt Over Immigration
+                        </a>
+                    </h3>
+
                     <p class="content-metadata">
                         <p class="byline">
                             <a href="http://www.theatlantic.com/author/elaina-plott/?utm_source=feed">Elaina Plott</a>
@@ -141,7 +140,6 @@
           
                     <div class="demo-card-image mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col content-image">
                         <div class="mdl-card__title mdl-card--expand"></div>
-
                     </div>
 
                     <div class="FontMalarText mdl-cell mdl-cell--12-col article">
@@ -165,45 +163,15 @@
                 </div> <!-- Closes article -->
 
                 <div class ="mdl-cell--top mdl-color--grey content mdl-shadow--4dp mdl-cell mdl-cell--5-col-desktop mdl-cell--8-col mdl-grid comments">
-                    <!-- <div id = "overlay"></div>
-                    <div class="fab mdl-button mdl-js-button mdl-button-_fab mdl-button-_colored mdl-js-ripple-effect">
-                        <i class="fab-icon material-icons">add</i>
 
-                        <form class = "comment_wrapper">
-                            <div class = "comment_header">
-                                <h3>Comment</h3>
-                            </div>
-
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <textarea class="mdl-textfield__input" type="text" rows= "5" id="sample5" ></textarea>
-                                <label class="mdl-textfield__label" for="sample5">Comment Here</label>
-                            </div>
-
-                            <div class = "button_wrapper">
-                                <button class="mdl-button mdl-js-button mdl-button-_primary" id="submit">Post</button>
-                                <button class="mdl-button mdl-js-button" id="cancel">Cancel</button>
-                            </div>
-                        </form>
-                    </div> -->
-
-                    <!-- new comments-->
-                    <a id="mdl-custom-btn" class="fab mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
-                        <i class="fab-icon material-icons">add</i>
-                    </a>
-                    
-                    <div id="mdl-custom-modal1" class="modal">
+                    <div id="new_comment_dialogue" class="new_comment_dialogue">
                         <div class="modal-content mdl-card mdl-shadow--2dp">
                             <div class="mdl-card__title mdl-card--expand">
-                                <form action="#" st>
+                                <form action="#">
                                     <div id = "commentbox" class="mdl-textfield mdl-js-textfield">
                                         <textarea class="mdl-textfield__input" type="text" rows= "5" id="sample5" ></textarea>
                                         <label class="FontMalarText mdl-textfield__label" for="sample5">Comment Here</label>
                                     </div>
-                                    <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield-_floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="^[\s()+-]*([0-9][\s()+-]*){6,20}$" id="mdl-phone">
-                                        <label class="mdl-textfield__label" for="mdl-phone">Phone...</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div> -->
                                 </form>
                             </div>
                             <div class="mdl-card__actions mdl-card--border">
@@ -220,13 +188,62 @@
                     </div>
                     <!-- new comments end -->
 
-                    <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
+                    <div class = "FontMalarText mdl-cell mdl-cell--10-col-desktop mdl-cell--7-col-tablet comments-header">
                         <h5>Top Comments</h5>
                     </div>
+
+                    <a id="add_comment_button" class="mdl-cell--1-col fab mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
+                        <i class="fab-icon material-icons">add</i>
+                    </a>
+
                     <hr id = "hr" />
                   
-                
-                   <div id='top_comment-1' class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                    <div id='top_comment-1' class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
+                        <div class = "commenter-profile-picture">
+                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
+                        </div>
+                        <div class="commenter-name FontMalarText">
+                            Jane Doe
+                            <div class = "score"></div>
+                        </div>
+                        <div class = "buttongrid mdl-grid">
+                            <div class = "mdl-cell mdl-cell--4-col score-container">
+                                <div id = "agreement_score" class="score">
+                                    agree: 0/0
+                                </div>
+                            
+                                <div id = "argument_score" class="score">
+                                    well argued: 0/0
+                                </div>
+                            </div>
+
+                            <div class = "mdl-card__supporting-text comment-summary FontMalarText">
+                                I believe immigration is a part of the American Dream!
+                            </div>
+
+                            <button class="agree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col mdl-cell--3-offset-desktop mdl-cell--1-offset-tablet">
+                                Agree 
+                            </button>
+
+                            <button class="disagree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
+                                Disagree
+                            </button>
+
+                            <button class="argued_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--2-col">
+                                Well Argued
+                            </button>
+
+                            <button class="flawed_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
+                                Flawed Argument
+                            </button>
+
+                            <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col-tablet">
+                                Reply
+                            </button>
+                        </div>
+                    </div> <!-- Closes comment -->
+
+                    <div class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
                         <div class = "commenter-profile-picture">
                             <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
                         </div>
@@ -235,86 +252,50 @@
                             <div class = "score"></div>
                         </div>
                         <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            I believe immigration is a part of the American Dream!
+                            Comment content goes here
                         </div>
 
                         <div class = "buttongrid mdl-grid">
-                        <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
-
-
+                            <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
                         </div>
 
                         <button class="upvote upvote0 active mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
                             <i id = "uparrow" class="material-icons">arrow_upward</i>
-                    </button>
+                        </button>
 
-                    <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
+                        <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
                             <i id = "downarrow" class="material-icons">arrow_downward</i>
-                    </button>
+                        </button>
 
-
-                    <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
-                        Reply
-                      </button>
-
-                        <!-- DONT DELETE THIS CONTENT / I want to keep it in case we want to go back to it
-
-
-                        <div id = "upvotescore">Upvote Score: 0</div>
-                        <div class = "mdl-card__actions">
-                            <button class = 'seemore mdl-button mdl-js-button'>see more</button>
-                        </div>
-
-                        <button class="upvote mdl-button mdl-js-button mdl-button-_icon mdl-cell mdl-cell-_1-col">
-                            <i id = "uparrow" class="material-icons">arrow_upward</i>
-                          </button>
-                          <button class="downvote mdl-button mdl-js-button mdl-button-_icon mdl-button-_colored mdl-cell mdl-cell-_1-col">
-                            <i id = "downarrow" class="material-icons">arrow_downward</i>
-                          </button>
-
-                          <div class = "mdl-cell mdl-cell-_5-col"></div>
-
-                          <button class="reply mdl-button mdl-js-button mdl-button-_raised mdl-js-ripple-effect mdl-button-_accent mdl-cell mdl-cell-_3-col">
+                        <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
                             Reply
-                          </button>
-                        
-                        -->
-
-
-
+                        </button>
                     </div> <!-- Closes comment -->
 
-                    <div class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                            <div class = "commenter-profile-picture">
-                                <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                            </div>
-                            <div class="FontMalarText commenter-name">
-                                Jane Doe
-                                <div class = "score"></div>
-                            </div>
-                            <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                                Comment content goes here
-                            </div>
-    
-                            <div class = "buttongrid mdl-grid">
-                                <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
-        
-        
-                                </div>
-        
-                                <button class="upvote upvote0 active mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
-                                    <i id = "uparrow" class="material-icons">arrow_upward</i>
-                            </button>
-        
-                            <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
-                                    <i id = "downarrow" class="material-icons">arrow_downward</i>
-                            </button>
-        
-        
-                            <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
-                                Reply
-                              </button>
-                    </div> <!-- Closes comment -->
+
+
+
+                    <!-- DONT DELETE THIS CONTENT / I want to keep it in case we want to go back to it
+
+                    <div id = "upvotescore">Upvote Score: 0</div>
+                    <div class = "mdl-card__actions">
+                        <button class = 'seemore mdl-button mdl-js-button'>see more</button>
+                    </div>
+
+                    <button class="upvote mdl-button mdl-js-button mdl-button-_icon mdl-cell mdl-cell-_1-col">
+                        <i id = "uparrow" class="material-icons">arrow_upward</i>
+                    </button>
+                    <button class="downvote mdl-button mdl-js-button mdl-button-_icon mdl-button-_colored mdl-cell mdl-cell-_1-col">
+                        <i id = "downarrow" class="material-icons">arrow_downward</i>
+                    </button>
+
+                    <div class = "mdl-cell mdl-cell-_5-col"></div>
+
+                    <button class="reply mdl-button mdl-js-button mdl-button-_raised mdl-js-ripple-effect mdl-button-_accent mdl-cell mdl-cell-_3-col">
+                        Reply
+                    </button>
+                    
+                    -->
 
                     <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
                         <h5>Comments</h5>

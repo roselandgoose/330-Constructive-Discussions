@@ -1,0 +1,58 @@
+.comment {
+    background-color: lightgrey;
+}
+
+.commenter-profile-picture {
+    float: left;
+    
+    width: 25px;
+    height: 25px;
+    
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+.commenter-name {
+    float: left;
+    
+    padding-left: 5px;
+    padding-top: 9px;
+    
+    font-weight: bold;
+}
+
+.score-container {
+    display: flex;
+}
+
+.agreement_score {
+    width: 70px;
+}
+
+.argument_score {
+    width: 100px;
+}
+
+.feedback_button {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.agree_button {
+    color: green;
+}
+
+.disagree_button {
+    color: red;
+}
+
+.argued_button {
+    color: green;
+}
+
+.flawed_button {
+    color: red;
+}
+
+.reply_button {
+}
