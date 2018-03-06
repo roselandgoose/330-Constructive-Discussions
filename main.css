@@ -43,5 +43,9 @@ main {
 }
 
 .horizontal_line {
-    width:100%;
+    width: 100%;
+}
+
+#login-dialogue_box {
+    display: none;
 }
