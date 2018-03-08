@@ -36,6 +36,10 @@
 }
 
 /* feedback buttons */
+.feedback-buttons {
+    display: none;
+}
+
 .feedback_button {
     padding-left: 0px;
     padding-right: 0px;
