@@ -174,7 +174,6 @@ main {
 }
 
 .headline {
-    font-family: 'Libre Franklin', sans-serif;
     font-weight: bold;
 }
 
@@ -280,7 +279,7 @@ main {
 /* Video Page */
 
 #video-size{
-  height: 400px;
+  width: 100%;
 }
 
 .border1{
