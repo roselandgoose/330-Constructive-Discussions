@@ -27,9 +27,10 @@ $(document).ready(function() {
     
     // Comments
     var feedback_buttons = $(".feedback-buttons");
-    
-    // Profile Creation
-    var create_profile_submit_button = $(".df-submit");
+
+    // Location Identification
+    var atCreateAccount = location.pathname.includes("create_account")
+    var atProfile = location.pathname.includes("profile")
 
     /* Site Loading */
     document.onload = check_login_status();
@@ -122,7 +123,6 @@ $(document).ready(function() {
         sessionStorage.setItem('userState', '0');
 
         // If the user is at their profile page, go to the home page
-        var atProfile = location.pathname.includes("profile")
         if (atProfile) {
             location.assign('./index.html');
         }
@@ -141,9 +141,13 @@ $(document).ready(function() {
 
 
     /* Profile Creation */
-    create_profile_submit_button.addEventListener('click', function() {
+    if (atCreateAccount) {
+        var create_profile_submit_button = document.querySelector('#create-profile-submit-button');
+
         // On clicking the submit button, login and go to the profile page for user 1
-        sessionStorage.setItem('userState', '1');
-        location.assign("./profile.html");
-    });
+        create_profile_submit_button.addEventListener('click', function() {
+            sessionStorage.setItem('userState', '1');
+            location.assign("./profile.html");
+        });
+    }
 })
