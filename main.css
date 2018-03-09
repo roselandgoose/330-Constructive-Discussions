@@ -65,6 +65,13 @@ main {
     z-index: 2;
 }
 
+.login-text {
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+}
+
 /* Global Content Settings */
 .title {
     font-family: 'Abril Fatface', cursive !important;
