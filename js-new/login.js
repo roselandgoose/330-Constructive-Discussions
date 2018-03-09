@@ -9,37 +9,55 @@
 
 //Jquery
 $(document).ready(function() {
-    /* Site Loading */
-    document.onload = check_login_status();
-    
-    // On document load, check the login status
-    function check_login_status(event) {
-        var userState = sessionStorage.getItem('userState');
-        var header_profile_icon = document.querySelector('#header-profile-icon'); 
-        var feedback_buttons = $(".feedback-buttons");
+    // Header icons
+    var header_profile_icon = document.querySelector('#header-profile-icon'); 
 
-        if ((userState == '1') || (userState == '2')) {
-            // Set the profile icon display status
-            header_profile_icon.style.display = "block";
-
-            // Set the reply button display statuses
-            //feedback_buttons.style.display = "block";
-            // this doesn't work I think because it conflicts with the template feedback buttons
-        }
-        else {
-            return 
-        }
-    }
-
-    /* Logging In */
+    // Login/out buttons
     var login_button = document.querySelector('#header-login-button');
+    var logout_button = document.querySelector('#header-logout-button');
 
+    // Login dialogue
     var login_dialogue_overlay = document.querySelector('#login-dialogue_overlay');
     var login_dialogue_box = document.querySelector('#login-dialogue_box');
     var login_username_field = document.querySelector('#loginuser');
     var login_cancel_button = document.querySelector('#logincancel');
 
+    // Notifications
     var login_notification = document.querySelector('#login-toast');
+    
+    // Comments
+    var feedback_buttons = $(".feedback-buttons");
+    
+
+    /* Site Loading */
+    document.onload = check_login_status();
+    
+    // On document load, check the login status
+    function check_login_status() {
+        var userState = sessionStorage.getItem('userState');
+
+        if ((userState == '1') || (userState == '2')) {
+            // Set the profile icon display status
+            header_profile_icon.style.display = "block";
+
+            if (userState == '1') {
+                header_profile_icon.setAttribute("href", "profile.html");
+            }
+            else {
+                header_profile_icon.setAttribute("href", "profile2.html");
+            }
+
+            // Set the reply button display statuses
+            //feedback_buttons.style.display = "block";
+            // this doesn't work I think because it conflicts with the template feedback buttons
+
+            // Replace the login button with a logout button
+            login_button.style.display = "none";
+            logout_button.style.display = "block"; 
+        }
+    }
+
+    /* Logging In */
 
     function show_login_dialogue() {
         login_dialogue_overlay.style.display = 'block';
@@ -95,11 +113,35 @@ $(document).ready(function() {
 
 
     /* Logging Out */
-    // On clicking the log out button, store the user state, undisplay the profile icon, set the log in/out status, and hide the reply buttons
+    // On clicking the log out button, log out
+    logout_button.addEventListener('click', logout);
+    function logout(event) {
+        // store the user state
+        sessionStorage.setItem('userState', '0');
 
-    // -- If the user is at their profile page, go to the home page
+        // If the user is at their profile page, go to the home page
+        var atProfile = location.pathname.includes("profile")
+        if (atProfile) {
+            location.assign('./index.html');
+        }
+        // Otherwise
+        else {
+            // Hide the profile icon
+            header_profile_icon.style.display = "none";
+
+            // Hide the feedback buttons
+
+            // Replace the logout button with a login button
+            login_button.style.display = "block";
+            logout_button.style.display = "none"; 
+        }
+    }
+
 
     /* Profile Creation */
-    // On clicking the submit button, go to the profile page and log in
-    
+    $(".df-submit").click(function() {
+        // On clicking the submit button, login and go to the profile page for user 1
+        sessionStorage.setItem('userState', '1');
+        location.assign("../profile.html");
+    });
 })

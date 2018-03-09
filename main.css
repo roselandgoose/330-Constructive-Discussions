@@ -43,6 +43,11 @@ main {
     margin-left: 5px;
 }
 
+#header-logout-button {
+    margin-left: 5px;
+    display: none;
+}
+
 #login-dialogue_overlay {
     display: none;
     position: fixed;
