@@ -1,128 +1,149 @@
+/* Hard Coded Values:
+ *
+ * userState:
+ * 0 -> No user logged in
+ * 1 -> JaneDoe123
+ * 2 -> JohnSmith456
+ *
+*/
 
-
+//Jquery
 $(document).ready(function() {
+    // Header icons
+    var header_profile_icon = document.querySelector('#header-profile-icon'); 
 
-  var input1 = document.getElementById("loginuser");
+    // Login/out buttons
+    var login_button = document.querySelector('#header-login-button');
+    var logout_button = document.querySelector('#header-logout-button');
 
-  // Execute a function when the user releases a key on the keyboard
-  input1.addEventListener("keyup", function(event) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-      // Trigger the button element with a click
-      document.getElementById("loginbut").click();
-    }
-  });
+    // Login dialogue
+    var login_dialogue_overlay = document.querySelector('#login-dialogue_overlay');
+    var login_dialogue_box = document.querySelector('#login-dialogue_box');
+    var login_username_field = document.querySelector('#loginuser');
+    var login_cancel_button = document.querySelector('#logincancel');
 
-  var input2 = document.getElementById("passuser");
-
-  // Execute a function when the user releases a key on the keyboard
-  input2.addEventListener("keyup", function(event) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-      // Trigger the button element with a click
-      document.getElementById("loginbut").click();
-    }
-  });
-  
-
-var loginn = document.getElementById('loginn');
-
-
-document.onload = checklog();
-
-function checklog(e) {
-    var pic = document.getElementById('black');
-    var pic1 = document.getElementById('black1');
-
-
-  var state = sessionStorage.getItem('state');
-
-  if (state == '1') {
-    loginn.innerHTML = 'Log out';
-    loginn.id = 'logoutind'
-    pic.style.display = 'block';
+    // Notifications
+    var login_notification = document.querySelector('#login-toast');
     
-
-    var logout = document.getElementById('logoutind');
-
-    logout.onclick = function() {
-      sessionStorage.setItem('state', '0');
-      location.reload();
-    }
-
-  }
-
-  else if (state == '2') {
-    loginn.innerHTML = 'Log out';
-    loginn.id = 'logoutind'
-    pic1.style.display = 'block';
+    // Comments
+    var feedback_buttons = $(".feedback-buttons");
     
+    // Profile Creation
+    var create_profile_submit_button = $(".df-submit");
 
-    var logout = document.getElementById('logoutind');
+    /* Site Loading */
+    document.onload = check_login_status();
+    
+    // On document load, check the login status
+    function check_login_status() {
+        var userState = sessionStorage.getItem('userState');
 
-    logout.onclick = function() {
-      sessionStorage.setItem('state', '0');
-      location.reload();
+        if ((userState == '1') || (userState == '2')) {
+            // Set the profile icon display status
+            header_profile_icon.style.display = "block";
+
+            if (userState == '1') {
+                header_profile_icon.setAttribute("href", "profile.html");
+            }
+            else {
+                header_profile_icon.setAttribute("href", "profile2.html");
+            }
+
+            // Set the reply button display statuses
+            //feedback_buttons.style.display = "block";
+            // this doesn't work I think because it conflicts with the template feedback buttons
+
+            // Replace the login button with a logout button
+            login_button.style.display = "none";
+            logout_button.style.display = "block"; 
+        }
     }
 
-  }
+    /* Logging In */
 
-  else {
-    var login = document.getElementsByClassName('login')[0];
-    var modal = $('.modal1')[0];
-    var cancel = document.getElementById('logincancel');
-
-    login.onclick = function() {
-        'use strict';
-        modal.style.display = "block";
+    function show_login_dialogue() {
+        login_dialogue_overlay.style.display = 'block';
     }
 
-    cancel.onclick = function() {
-        modal.style.display = 'none';
+    function close_login_dialogue(event) {
+        login_dialogue_overlay.style.display = 'none';
     }
-  }
-  
-}
 
-(function() {
-  'use strict';
-  var snackbarContainer = document.querySelector('#toast-2');
-  var showToastButton = document.querySelector('#loginbut');
-  showToastButton.addEventListener('click', function() {
-    'use strict';
-    var data = {message: 'Invalid username or password!'};
-    snackbarContainer.MaterialSnackbar.showSnackbar(data);
-  });
-}()); 
+    // On clicking the log in button, show the dialogue box
+    login_button.addEventListener('click', show_login_dialogue);
 
-var loginuser = document.getElementById('loginuser');
-var loginbut = document.getElementById('loginbut');
-var modal = $('.modal1')[0];
+    // Prevent clicks in the dialogue box from passing through
+    login_dialogue_box.addEventListener('click', function(event) {event.stopPropagation();}
+    );
 
-loginbut.onclick = function() {
-    'use strict';	
+    // Monitor keypresses in the login box
+    login_dialogue_box.addEventListener('keyup', function(event) {
+        // On pressing escape, close the box
+        if (event.keyCode === 27) {
+            close_login_dialogue(event);
+        }
+        // On pressing enter in the box, login
+        else if (event.keyCode === 13) {
+            login(event);
+        }
+    });
+
+    function login(event) {
+        // If the submission is recognized, store the current user, and reload the page
+        if (loginuser.value == 'JaneDoe123') {
+            sessionStorage.setItem('userState', '1');
+            close_login_dialogue();
+            location.reload();
+        }
+        else if (loginuser.value == 'JohnSmith456') {
+            sessionStorage.setItem('userState', '2');
+            close_login_dialogue();
+            location.reload();
+        }
+        // Otherwise, notify the user
+        else {
+            var login_failure_message = {message: "Invalid username or password!"};
+            login_notification.MaterialSnackbar.showSnackbar(login_failure_message);
+        }
+    }
+
+    // On pressing cancel, close the box
+    login_cancel_button.addEventListener('click', close_login_dialogue);
+
+    // On clicking on the overlay, outside the box, close the box
+    login_dialogue_overlay.addEventListener('click', close_login_dialogue);
 
 
-    if (loginuser.value == 'JaneDoe123')
-    {sessionStorage.setItem('state', '1');
-    modal.style.display = "none";}
+    /* Logging Out */
+    // On clicking the log out button, log out
+    logout_button.addEventListener('click', logout);
+    function logout(event) {
+        // store the user state
+        sessionStorage.setItem('userState', '0');
 
-    else if (loginuser.value == 'JohnSmith456')
-    {sessionStorage.setItem('state', '2');
-    modal.style.display = "none";}
+        // If the user is at their profile page, go to the home page
+        var atProfile = location.pathname.includes("profile")
+        if (atProfile) {
+            location.assign('./index.html');
+        }
+        // Otherwise
+        else {
+            // Hide the profile icon
+            header_profile_icon.style.display = "none";
 
-    else {
-      sessionStorage.setItem('state', '0');     
-      return;
-  }
+            // Hide the feedback buttons
 
-    location.reload();
-}
+            // Replace the logout button with a login button
+            login_button.style.display = "block";
+            logout_button.style.display = "none"; 
+        }
+    }
 
 
-
+    /* Profile Creation */
+    create_profile_submit_button.addEventListener('click', function() {
+        // On clicking the submit button, login and go to the profile page for user 1
+        sessionStorage.setItem('userState', '1');
+        location.assign("./profile.html");
+    });
 })
