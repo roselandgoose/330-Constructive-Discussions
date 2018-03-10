@@ -1,0 +1,77 @@
+#home-page-title {
+    font-family: 'Abril Fatface', cursive !important;
+    font-size: 34px;
+    font-style: italic;
+    line-height: 40px;
+    margin: 24px 0;
+}
+
+.home-content-title-container {
+    padding-bottom: 4px !important;
+    height: 150px;
+}
+
+.home-content-title {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 100%;
+    font-weight: bold;
+    font-size:  30pt;
+    margin: 24px 0 16px;
+}
+
+.home-content-blurb {
+    max-height: 145px;
+}
+
+#article1-image {
+    background:     
+    linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.2)
+      ),
+    url(media/lead_960.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.home-comments .home-comment {
+    background-color: lightgrey;
+}
+
+.whole-card-link {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+}
+
+.read-more-button-container {
+    margin: 0px !important;
+    height: 0px;
+}
+
+.read-more-button {
+    position: relative !important;
+    transform: translate(-10px, -45px);
+    
+    float: right;
+    
+    z-index: 9999;
+
+    background-color: lightgrey !important; 
+}
+
+#small-card1 {
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-bottom: 12px !important;
+
+    width: 100% !important;
+}
+
+#small-card2 {
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+
+    width: 100% !important;
+}
