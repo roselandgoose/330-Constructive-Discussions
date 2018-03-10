@@ -28,6 +28,7 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [ ] Refactoring
         * [ ] Article Page
             * [x] Multi-column scrolling
+            * [ ] Hide scroll bars
             * [ ] Padding
         * [ ] Video Page
             * [ ] Bullets and padding
