@@ -17,11 +17,8 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [x] Define buttons
     * [ ] Full feedback counts buttons
     * [ ] Identify appropriate spacing between comments
-    * [ ] Implement mouse-over reactivity
-    * [ ] Implement on-click reactivity
-    * [ ] Graphic Design
+    * [x] Graphic Design
         * [x] Font
-        * [ ] Consistence and attractive allignment
     * [x] Profile page
     * [x] Account creation page
 * Final Prototype:
