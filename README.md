@@ -27,8 +27,10 @@ BTW. I have a script in all the headers that integrates with my editor for live 
 * Final Prototype:
     * [ ] Refactoring
         * [ ] Article Page
-            * [ ] Multi-column scrolling
+            * [x] Multi-column scrolling
             * [ ] Padding
         * [ ] Video Page
             * [ ] Bullets and padding
-        * [ ] Home Page
+        * [x] Home Page
+        * [ ] Profile Pages
+        * [ ] Create Account Page

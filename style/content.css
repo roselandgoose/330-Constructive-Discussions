@@ -2,3 +2,7 @@
     min-height: 300px;
   background: url('../media/lead_960.jpg') center / cover;
 }
+
+.content-column {
+    overflow-y: scroll !important;
+}
