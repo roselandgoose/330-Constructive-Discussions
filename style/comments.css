@@ -1,6 +1,7 @@
 .comments {
     padding: 15pt !important;
     overflow-y: scroll !important;
+    max-height: 98.2%;
 }
 
 .comments::-webkit-scrollbar { width: 0 !important }
@@ -9,8 +10,11 @@
     background-color: lightgrey;
     text-align: right;
     display: inline-grid;
-    grid-template-columns: 12.5% 12.5% 10.5% 12.5% 12.5% 14.5% 12.5% 12.5%;
+    grid-template-columns: 10.5% 12.5% 10% 12.5% 12.5% 17% 12.5% 12.5%;
     justify-content: space-between;
+    padding-top: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
 }
 
 /* commenter */ 
@@ -25,14 +29,13 @@
     height: 25px;
     
     margin-left: 7px;
-    margin-top: 7px;
 }
 
 .commenter-name {
     float: left;
     
     padding-left: 5px;
-    padding-top: 9px;
+    padding-top: 3px;
     
     font-weight: bold;
 }
@@ -40,6 +43,7 @@
 /* feedback score */
 .feedback_score {
     grid-column: 4 / 9;
+    padding-top: 1px;
 }
 
 .agreement_score {
@@ -101,7 +105,9 @@
 
 /* reply button */
 .reply_button {
-    grid-column: 8
+    grid-column: 8;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 /* new comment process */
