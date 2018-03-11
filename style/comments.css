@@ -1,3 +1,10 @@
+.comments {
+    padding: 15pt !important;
+    overflow-y: scroll !important;
+}
+
+.comments::-webkit-scrollbar { width: 0 !important }
+
 .comment {
     background-color: lightgrey;
 }

@@ -23,12 +23,13 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [x] Account creation page
 * Final Prototype:
     * [ ] Refactoring
-        * [ ] Article Page
+        * [x] Article Page
             * [x] Multi-column scrolling
-            * [ ] Hide scroll bars
-            * [ ] Padding
-        * [ ] Video Page
-            * [ ] Bullets and padding
+            * [x] Hide scroll bars
+            * [x] Padding
+        * [x] Video Page
+            * [x] Bullets and padding
+            * [x] Video sizing
         * [x] Home Page
         * [ ] Profile Pages
         * [ ] Create Account Page
