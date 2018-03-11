@@ -1,6 +1,7 @@
 .comments {
     padding: 15pt !important;
     overflow-y: scroll !important;
+    max-height: 98.2%;
 }
 
 .comments::-webkit-scrollbar { width: 0 !important }
