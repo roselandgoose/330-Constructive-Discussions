@@ -1,0 +1,106 @@
+.profile_wrapper{
+    margin-left: 300px;
+    width: 300px;
+    text-align: right;
+    padding-top: 50px;
+    float: left;
+}
+
+.demo-card-square.mdl-card {
+    width: 320px;
+    height: 400px;
+}
+
+#profile_background {
+    color: #fff;
+    background:
+      url('../media/female_image.png') #46B6AC;
+      background-size: 100%;
+}
+
+#profile_background2 {
+    color: #fff;
+    background:
+      url('../media/male_image.png') #46B6AC;
+      background-size: 100%;
+}
+
+#support{
+    padding: 8px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.right_wrapper{
+    width: 650px;
+    padding-top: 25px;
+    float: left;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.info_wrapper{
+    text-align: left;
+    width: 650px;
+    float: left;
+    font-size: 15pt;
+    line-height: 40px;
+    /*font-family: 'Mukta Malar', sans-serif;*/
+    padding-left: 8px;
+}
+
+.com_wrapper{
+    float: left;
+    width: 650px;
+    text-align: left;
+    padding-top: 30px;
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.FontBaskervilleTitle {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 100%;
+    font-weight: bold;
+    font-size:  30pt;
+}
+
+.FontBaskervilleTitleMini {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 150%;
+    font-weight: bold;
+    font-size:  20pt;
+}
+
+.FontMalarText {
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.FontMalarTextLarge {
+    font-family: 'Mukta Malar', sans-serif;
+    font-size: 30pt;
+}
+
+
+
+/*
+Create Profile Page
+*/
+
+.df-wrapper {
+    padding: 0px !important;
+}
+
+div [class^="datefield-"] {
+    width: 11%;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 2px;
+}
+
+.df-submit_wrapper {
+    width: 310px;
+}
+
+.df-submit {
+    float: right;
+}

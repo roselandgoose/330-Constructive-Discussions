@@ -31,5 +31,5 @@ BTW. I have a script in all the headers that integrates with my editor for live 
             * [x] Bullets and padding
             * [x] Video sizing
         * [x] Home Page
-        * [ ] Profile Pages
+        * [x] Profile Pages
         * [ ] Create Account Page
