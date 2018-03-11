@@ -13,9 +13,10 @@ BTW. I have a script in all the headers that integrates with my editor for live 
         * [x] Comment box that clears with cancel
         * [x] Comments that stick
         * [ ] Replies to comments
+        * [ ] Feedback counters
 * P6 - Sunday:
     * [x] Define buttons
-    * [ ] Full feedback counts buttons
+    * [x] Full feedback counts buttons
     * [ ] Identify appropriate spacing between comments
     * [x] Graphic Design
         * [x] Font

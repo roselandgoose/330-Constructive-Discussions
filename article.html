@@ -203,9 +203,9 @@
                     <hr class="horizontal_line" />
 
 
-                    <div id='article-comment-1' class="comment mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-grid">
+                    <div id='article-comment-1' class="comment mdl-cell mdl-cell--12-col mdl-shadow--4dp">
 
-                        <div class = "commenter mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet">
+                        <div class = "commenter">
                             <!-- profile picture -->
                             <div class = "commenter-profile-picture">
                                 <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
@@ -218,7 +218,7 @@
                         </div>
 
                         <!-- comment score -->
-                        <div class = "score-container mdl-cell mdl-cell--3-col">
+                        <div class="feedback_score">
                             <div class="agreement_score">
                                 Agree: 0/0
                             </div>
@@ -228,37 +228,39 @@
                             </div>
                         </div>
 
-                        <div class = "mdl-cell mdl-cell--12-col mdl-card__supporting-text comment-content">
+                        <div class = "mdl-card__supporting-text comment-content">
                             I believe immigration is a part of the American Dream!
                         </div>
 
-                        <div class="feedback-buttons">
-                            <button class="agree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col mdl-cell--3-offset-desktop mdl-cell--1-offset-tablet">
-                                Agree 
-                            </button>
-
-                            <button class="disagree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
-                                Disagree
-                            </button>
-
-                            <button class="argued_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--2-col">
-                                Well Argued
-                            </button>
-
-                            <button class="flawed_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
-                                Flawed Argument
-                            </button>
-
-                            <button class="reply_button mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col-tablet">
-                                Reply
-                            </button>
+                        <button class="agree_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">add</i>
+                        </button>
+                        <div class="agree_label">
+                            Agree
                         </div>
+                        <button class="disagree_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">remove</i>
+                        </button>
+
+                        <button class="argued_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">add</i>
+                        </button>
+                        <div class="argued_label">
+                            Well Argued
+                        </div>
+                        <button class="flawed_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">remove</i>
+                        </button>
+
+                        <button class="reply_button mdl-button mdl-js-button mdl-button--raised">
+                            Reply
+                        </button>
+
                     </div> <!-- closes comment -->
 
 
                     <div id='comment-template' class="comment mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-grid">
-
-                        <div class = "commenter mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet">
+                        <div class = "commenter">
                             <!-- profile picture -->
                             <div class = "commenter-profile-picture">
                                 <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
@@ -266,12 +268,11 @@
 
                             <!-- commenter name -->
                             <div class="commenter-name">
-                                
                             </div>
                         </div>
 
                         <!-- comment score -->
-                        <div class = "score-container mdl-cell mdl-cell--3-col">
+                        <div class="feedback_score">
                             <div class="agreement_score">
                                 Agree: 0/0
                             </div>
@@ -281,30 +282,34 @@
                             </div>
                         </div>
 
-                        <div class = "mdl-cell mdl-cell--12-col mdl-card__supporting-text comment-content">
+                        <div class = "mdl-card__supporting-text comment-content">
                         </div>
 
-                        <div class="feedback-buttons">
-                            <button class="agree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col mdl-cell--3-offset-desktop mdl-cell--1-offset-tablet">
-                                Agree 
-                            </button>
-
-                            <button class="disagree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
-                                Disagree
-                            </button>
-
-                            <button class="argued_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--2-col">
-                                Well Argued
-                            </button>
-
-                            <button class="flawed_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
-                                Flawed Argument
-                            </button>
-
-                            <button class="reply_button mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col-tablet">
-                                Reply
-                            </button>
+                        <button class="agree_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">add</i>
+                        </button>
+                        <div class="agree_label">
+                            Agree
                         </div>
+                        <button class="disagree_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">remove</i>
+                        </button>
+
+                        <button class="argued_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">add</i>
+                        </button>
+                        <div class="argued_label">
+                            Well Argued
+                        </div>
+                        <button class="flawed_button active feedback_button mdl-button mdl-js-button">
+                            <i class="fab-icon material-icons">remove</i>
+                        </button>
+
+                        <button class="reply_button mdl-button mdl-js-button mdl-button--raised">
+                            Reply
+                        </button>
+
+                    
                     </div> <!-- closes comment -->
 
                 </div>

@@ -7,9 +7,17 @@
 
 .comment {
     background-color: lightgrey;
+    text-align: right;
+    display: inline-grid;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    justify-content: space-between;
 }
 
 /* commenter */ 
+.commenter {
+    grid-column: 1 / 4;
+}
+
 .commenter-profile-picture {
     float: left;
     
@@ -30,46 +38,70 @@
 }
 
 /* feedback score */
-.score-container {
-    display: flex;
+.feedback_score {
+    grid-column: 4 / 9;
 }
 
 .agreement_score {
     width: 70px;
+    display: inline-block;
 }
 
 .argument_score {
     width: 100px;
+    display: inline-block;
+}
+
+/* comment content */
+.comment-content {
+    grid-column: 1 / 9;
+    text-align: left;
 }
 
 /* feedback buttons */
-.feedback-buttons {
-    display: none;
-}
-
 .feedback_button {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
 }
 
 .agree_button {
-    color: green;
+    grid-column: 2;
+    text-align: right !important;
+}
+
+.agree_label {
+    text-align: center;
+    grid-column: 3;
+    line-height: 38px;
+    height: 24px;
 }
 
 .disagree_button {
-    color: red;
+    text-align: left !important;
+    grid-column: 4;
 }
 
 .argued_button {
-    color: green;
+    grid-column: 5;
+    text-align: right !important;
+}
+
+.argued_label {
+    text-align: center;
+    grid-column: 6;
+    line-height: 38px;
+    height: 24px;
 }
 
 .flawed_button {
-    color: red;
+    grid-column: 7;
+    text-align: left !important;
 }
 
 /* reply button */
 .reply_button {
+    grid-column: 8
 }
 
 /* new comment process */
