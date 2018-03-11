@@ -22,7 +22,7 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [x] Profile page
     * [x] Account creation page
 * Final Prototype:
-    * [ ] Refactoring
+    * [x] Refactoring
         * [x] Article Page
             * [x] Multi-column scrolling
             * [x] Hide scroll bars
@@ -32,4 +32,4 @@ BTW. I have a script in all the headers that integrates with my editor for live 
             * [x] Video sizing
         * [x] Home Page
         * [x] Profile Pages
-        * [ ] Create Account Page
+        * [x] Create Account Page
