@@ -153,7 +153,6 @@ main {
 }
 
 .headline {
-    font-family: 'Libre Franklin', sans-serif;
     font-weight: bold;
 }
 
@@ -239,6 +238,10 @@ main {
     overflow-y: scroll;
 }
 
+#article1contentwrapper {
+    padding: 20px;
+}
+
 /* Article Image */
 
  .demo-card-image.mdl-card {
@@ -255,7 +258,7 @@ main {
 /* Video Page */
 
 #video-size{
-  height: 400px;
+  width: 100%;
 }
 
 .border1{
