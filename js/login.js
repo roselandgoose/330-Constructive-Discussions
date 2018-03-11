@@ -21,6 +21,7 @@ $(document).ready(function() {
     var login_dialogue_box = document.querySelector('#login-dialogue_box');
     var login_username_field = document.querySelector('#loginuser');
     var login_cancel_button = document.querySelector('#logincancel');
+    var login_submit_button = document.querySelector('#login_form_submit_button');
 
     // Notifications
     var login_notification = document.querySelector('#login-toast');
@@ -88,6 +89,8 @@ $(document).ready(function() {
             login(event);
         }
     });
+
+    login_submit_button.addEventListener('click', login);
 
     function login(event) {
         // If the submission is recognized, store the current user, and reload the page
