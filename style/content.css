@@ -6,3 +6,18 @@
 .content-column {
     overflow-y: scroll !important;
 }
+
+.content-title {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 100%;
+    font-weight: bold;
+    font-size:  30pt;
+}
+
+.article {
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.content-blurb {
+    font-family: 'Mukta Malar', sans-serif;
+}

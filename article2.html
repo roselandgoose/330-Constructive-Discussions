@@ -18,36 +18,26 @@
 
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
         <title>Constructive Discssion - Video: Spending Deal Means Trillion-Dollar Deficit</title>
 
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="media/android-desktop.png">
+        <!-- Responsive Design - Media Queries-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-        <!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-        <link rel="apple-touch-icon-precomposed" href="media/ios-desktop.png">
+        <!-- Styling -->
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/content.css">
+        <link rel="stylesheet" href="style/comments.css">
 
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="media/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
-
-        <link rel="shortcut icon" href="media/favicon.png">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Material Design Lite -->
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-        <link rel="stylesheet" href="style/styles.css">
-        
-        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Franklin:900" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Franklin:900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Karma|Libre+Baskerville|Merriweather|Mukta+Malar|Roboto+Slab" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Libre+Franklin:900" rel="stylesheet">
+    
         <!-- DEVELOPMENT CODE - Auto Reloading -->
         <script src='http://127.0.0.1:9001/js/socket.js'></script>
     </head>
@@ -55,17 +45,16 @@
     <body>
         <div class="contentclass mdl-layout mdl-js-layout">
             <header class="header mdl-layout__header mdl-layout--fixed-header mdl-layout__header-row">
-
                 <!-- Title -->
-                <a class="mdl-navigation__link"href="index.html">
+                <a class="mdl-navigation__link" href="index.html">
                     <span class="title mdl-layout-title">CONSTRUCTIVE DISCUSSIONS</span>
                 </a>
 
                 <!-- To align search and profile to right -->
                 <div class="mdl-layout-spacer"></div>
-
+            
                 <!-- Expandable Search Bar -->
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" id="search-icon">
                     <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
                         <i class="material-icons">search</i>
                     </label>
@@ -74,57 +63,74 @@
                         <label class="mdl-textfield__label" for="search">Enter your query...</label>
                     </div>
                 </div>
-                                <!-- Profile Icon -->
-                                <a class="mdl-navigation__link" id = "black" href="profile.html">
-                                    <!-- <img class = "profile_icon" src = "media/female_image.png"> -->
-                                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
-                                </a>
-                                <a class="mdl-navigation__link" id = "black1" href="profile2.html">
-                                    <!-- <img class = "profile_icon" src = "media/male_image.png"> -->
-                                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
-                                </a>
 
-                <button id='loginart' class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
-                    log in
-                  </button>
-                  <div id="mdl-custom-modal" class="modal2">
-                    <div class="modal-content2 mdl-card mdl-shadow--2dp">
-                        <div class="mdl-card__title mdl-card--expand">
+                <!-- Profile Icon -->
+                <a class="mdl-navigation__link" id = "header-profile-icon" href="">
+                    <i class="material-icons" style="font-size: 24pt; color: white;" >person</i>
+                </a>
+    
+                <!-- Login button -->
+                <button id='header-login-button' class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                    log in / create account
+                </button>
+
+                <!-- Logout button -->
+                <button id='header-logout-button' class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                    log out
+                </button>
+
+                <div id="login-dialogue_overlay" class="overlay">
+                    <!-- Login Dialogue Box -->
+                    <div id="login-dialogue_box" class="mdl-card mdl-grid mdl-shadow--2dp">
+                        <div class="login-text mdl-cell mdl-cell--12-col mdl-card__subtitle-text mdl-card--expand">
+                            Login:
+                        </div>
+
+                        <!-- Username -->
+                        <div class="login-text mdl-cell mdl-cell--12-col mdl-card__title mdl-card--expand">
                             <form action="#" onSubmit="return false" st>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input class="mdl-textfield__input" type="text" id="loginuser">
                                     <label class="mdl-textfield__label" for="loginuser">Username</label>
                                 </div>
-                                </form>
-                            </div>
-                            <div class="mdl-card__title mdl-card--expand">
+                            </form>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="login-text mdl-cell mdl-cell--12-col mdl-card__title mdl-card--expand">
                             <form action="#" onSubmit="return false">
-                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="password" id="sample3">
-                                        <label class="mdl-textfield__label" for="sample3">Password</label>
-                                    </div>
-                                </form>
-                            </div>  
-                            <div class = 'loginbuttongrid mdl-grid'>
-                                <button id='login_form_submit_button' class="mdl-cell mdl-cell--4-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
-                                    log in
-                                  </button>
-                                  <button id='logincancel' class="mdl-cell mdl-cell--4-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
-                                    cancel
-                                  </button>
-                                  </div>
-                            </div>
-                            </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="password" id="sample3">
+                                    <label class="mdl-textfield__label" for="sample3">Password</label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Create Account -->
+                        <div class="login-text mdl-cell mdl-cell--12-col">
+                            <a href="create_account.html">Or Create an Account</a>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button id='login_form_submit_button' class="mdl-cell mdl-cell--4-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                            log in
+                        </button>
+
+                        <!-- Cancel Button -->
+                        <button id='logincancel' class="mdl-cell mdl-cell--4-col mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--accent login">
+                            cancel
+                        </button>
+                    </div>
+                </div>
             </header>
 
             <main class="mdl-layout__content mdl-grid">
 
                 <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--8-col-tablet mdl-card mdl-color--white mdl-shadow--4dp content">
-                        <h3 class = "headline">
-                    <a class = "video-title" href= "http://www.wsj.com/video/spending-deal-means-trillion-dollar-deficits/8E1EBB17-773C-41B2-9DE4-8F80AB957532.html">
+                    <a class = "content-title" href= "http://www.wsj.com/video/spending-deal-means-trillion-dollar-deficits/8E1EBB17-773C-41B2-9DE4-8F80AB957532.html">
                         Spending Deal Means Trillion-Dollar Deficit
                     </a>
-                </h3>
+
                     <ul class="content-metadata">
                         <li class="date"> Feb 12, 2018</li>
                     </ul>
@@ -142,254 +148,167 @@
                 </div>
 
                 <div class ="mdl-cell--top mdl-color--grey content mdl-shadow--4dp mdl-cell mdl-cell--5-col-desktop mdl-cell--8-col mdl-grid comments">
-                    <!-- <div id = "overlay"></div>
-                    <div class="fab mdl-button mdl-js-button mdl-button-_fab mdl-button-_colored mdl-js-ripple-effect">
-                        <i class="fab-icon material-icons">add</i>
+                    <!-- new comment composition dialogue -->
+                    <div id="new_comment-dialogue" class="mdl-card mdl-shadow--2dp">
 
-                        <form class = "comment_wrapper">
-                            <div class = "comment_header">
-                                <h3>Comment</h3>
-                            </div>
+                        <!-- text box -->
+                        <div class="mdl-card__title mdl-card--expand">
+                            <form action="#">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <textarea class="mdl-textfield__input" type="text" rows= "5" id="new_comment-text_box"></textarea>
+                                    <label class="mdl-textfield__label" for="new_comment-text_box">Comment Here</label>
+                                </div>
+                            </form>
+                        </div>
 
-                            <div class="mdl-textfield mdl-js-textfield">
-                                <textarea class="mdl-textfield__input" type="text" rows= "5" id="sample5" ></textarea>
-                                <label class="mdl-textfield__label" for="sample5">Comment Here</label>
-                            </div>
+                        <!-- submit button -->
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a id = 'new_comment-submit_button' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                                Submit
+                            </a>
+                        </div>
 
-                            <div class = "button_wrapper">
-                                <button class="mdl-button mdl-js-button mdl-button-_primary" id="submit">Post</button>
-                                <button class="mdl-button mdl-js-button" id="cancel">Cancel</button>
-                            </div>
-                        </form>
-                    </div> -->
+                        <!-- close button (needs to come after comment box) -->
+                        <div class="mdl-card__menu">
+                            <button id = 'new_comment-close_button' class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-custom-close">
+                              <span class="material-icons">close</span>
+                            </button>
+                        </div>
 
-                    <!-- new comments-->
-                    <a id="mdl-custom-btn" class="fab mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
+                    </div> <!-- closes new comment dialogue -->
+
+                    <div class = "mdl-cell mdl-cell--10-col-desktop mdl-cell--7-col-tablet comments-header">
+                        <h5>Comments</h5>
+                    </div>
+
+                    <a id="add_comment_button" class="mdl-cell--1-col fab mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">
                         <i class="fab-icon material-icons">add</i>
                     </a>
-                    
-                    <div id="mdl-custom-modal1" class="modal">
-                        <div class="modal-content mdl-card mdl-shadow--2dp">
-                            <div class="mdl-card__title mdl-card--expand">
-                                <form action="#" st>
-                                    <div id = "commentbox" class="mdl-textfield mdl-js-textfield">
-                                        <textarea class="mdl-textfield__input" type="text" rows= "5" id="sample5" ></textarea>
-                                        <label class="FontMalarText mdl-textfield__label" for="sample5">Comment Here</label>
-                                    </div>
-                                    <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield-_floating-label">
-                                        <input class="mdl-textfield__input" type="text" pattern="^[\s()+-]*([0-9][\s()+-]*){6,20}$" id="mdl-phone">
-                                        <label class="mdl-textfield__label" for="mdl-phone">Phone...</label>
-                                        <span class="mdl-textfield__error">Input is not a number!</span>
-                                    </div> -->
-                                </form>
-                            </div>
-                            <div class="mdl-card__actions mdl-card--border">
-                                <a id = 'submit' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                                    Submit
-                                </a>
-                            </div>
-                            <div class="mdl-card__menu">
-                                <button id = 'closer' class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-custom-close">
-                                  <span class="material-icons">close</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- new comments end -->
 
-                    <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
-                        <h5>Top Comments</h5>
-                    </div>
-                    <hr id = "hr" />
-                  
-                
-                   <div id='top1' class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
+                    <hr class="horizontal_line" />
+
+
+                    <div id='article-comment-1' class="comment mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-grid">
+
+                        <div class = "commenter mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet">
+                            <!-- profile picture -->
+                            <div class = "commenter-profile-picture">
+                                <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
+                            </div>
+
+                            <!-- commenter name -->
+                            <div class="commenter-name">
+                                Jane Doe
+                            </div>
                         </div>
-                        <div class="FontMalarText commenter-name">
-                            Jane Doe
-                            <div class = "score"></div>
+
+                        <!-- comment score -->
+                        <div class = "score-container mdl-cell mdl-cell--3-col">
+                            <div class="agreement_score">
+                                Agree: 0/0
+                            </div>
+                        
+                            <div class="argument_score">
+                                Well Argued: 0/0
+                            </div>
                         </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
+
+                        <div class = "mdl-cell mdl-cell--12-col mdl-card__supporting-text comment-content">
                             I believe immigration is a part of the American Dream!
                         </div>
 
-                        <div class = "buttongrid mdl-grid">
-                        <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
-
-
-                        </div>
-
-                        <button class="upvote upvote0 active mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
-                            <i id = "uparrow" class="material-icons">arrow_upward</i>
-                    </button>
-
-                    <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
-                            <i id = "downarrow" class="material-icons">arrow_downward</i>
-                    </button>
-
-
-                    <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
-                        Reply
-                      </button>
-
-                        <!-- DONT DELETE THIS CONTENT / I want to keep it in case we want to go back to it
-
-
-                        <div id = "upvotescore">Upvote Score: 0</div>
-                        <div class = "mdl-card__actions">
-                            <button class = 'seemore mdl-button mdl-js-button'>see more</button>
-                        </div>
-
-                        <button class="upvote mdl-button mdl-js-button mdl-button-_icon mdl-cell mdl-cell-_1-col">
-                            <i id = "uparrow" class="material-icons">arrow_upward</i>
-                          </button>
-                          <button class="downvote mdl-button mdl-js-button mdl-button-_icon mdl-button-_colored mdl-cell mdl-cell-_1-col">
-                            <i id = "downarrow" class="material-icons">arrow_downward</i>
-                          </button>
-
-                          <div class = "mdl-cell mdl-cell-_5-col"></div>
-
-                          <button class="reply mdl-button mdl-js-button mdl-button-_raised mdl-js-ripple-effect mdl-button-_accent mdl-cell mdl-cell-_3-col">
-                            Reply
-                          </button>
-                        
-                        -->
-
-
-
-                    </div> <!-- Closes comment -->
-
-                    <div class="commentboxwrapper mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                            <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                            </div>
-                            <div class="FontMalarText commenter-name">
-                                Jane Doe
-                                <div class = "score"></div>
-                            </div>
-                            <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                                Comment content goes here
-                            </div>
-    
-                            <div class = "buttongrid mdl-grid">
-                                <div id = "upvotescore" class = "mdl-cell mdl-cell--10-col">Upvote Score: 0</div>
-        
-        
-                                </div>
-        
-                                <button class="upvote upvote0 active mdl-button mdl-js-button mdl-button--icon mdl-cell mdl-cell--1-col">
-                                    <i id = "uparrow" class="material-icons">arrow_upward</i>
+                        <div class="feedback-buttons">
+                            <button class="agree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col mdl-cell--3-offset-desktop mdl-cell--1-offset-tablet">
+                                Agree 
                             </button>
-        
-                            <button class="downvote downvote0 active mdl-button mdl-js-button mdl-button--icon mdl-button--colored mdl-cell mdl-cell--1-col">
-                                    <i id = "downarrow" class="material-icons">arrow_downward</i>
+
+                            <button class="disagree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
+                                Disagree
                             </button>
-        
-        
-                            <button id = 'reply' class="mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col mdl-cell--7-offset">
+
+                            <button class="argued_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--2-col">
+                                Well Argued
+                            </button>
+
+                            <button class="flawed_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
+                                Flawed Argument
+                            </button>
+
+                            <button class="reply_button mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col-tablet">
                                 Reply
-                              </button>
-                    </div> <!-- Closes comment -->
-
-                    <div class = "FontMalarText mdl-cell mdl-cell--12-col comments-header">
-                        <h5>Comments</h5>
-                    </div>
-                    <hr id = "hr" />
-
-                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
+                            </button>
                         </div>
-                        <div class="FontMalarText commenter-name">
-                            Jane Doe
-                        </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                        </div>
-                        <div class="FontMalarText commenter-name">
-                            Jane Doe
-                        </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                        </div>
-                        <div class="FontMalarText commenter-name">
-                            Jane Doe
-                        </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                        </div>
-                        <div class="FontMalarText commenter-name">
-                            Jane Doe
-                        </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                        </div>
-                        <div class="FontMalarText commenter-name">
-                            Jane Doe
-                        </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
-
-                    <div id = "new-comment0" class="mdl-cell mdl-cell--12-col mdl-shadow--4dp comment">
-                        <div class = "commenter-profile-picture">
-                            <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
-                        </div>
-                        <div class="FontMalarText commenter-name">
-                            John Doe
-                        </div>
-                        <div class = "FontMalarText mdl-card__supporting-text comment-summary">
-                            Comment content goes here
-                        </div>
-                    </div> <!-- Closes comment -->
+                    </div> <!-- closes comment -->
 
 
-               
+                    <div id='comment-template' class="comment mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-grid">
 
+                        <div class = "commenter mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet">
+                            <!-- profile picture -->
+                            <div class = "commenter-profile-picture">
+                                <i class="material-icons" style="font-size: 20pt; color: black;" >person</i>
+                            </div>
 
-                <!-- notification snackbar -->       
-                <div id="toast-1" class="mdl-js-snackbar mdl-snackbar">
+                            <!-- commenter name -->
+                            <div class="commenter-name">
+                                
+                            </div>
+                        </div>
+
+                        <!-- comment score -->
+                        <div class = "score-container mdl-cell mdl-cell--3-col">
+                            <div class="agreement_score">
+                                Agree: 0/0
+                            </div>
+                        
+                            <div class="argument_score">
+                                Well Argued: 0/0
+                            </div>
+                        </div>
+
+                        <div class = "mdl-cell mdl-cell--12-col mdl-card__supporting-text comment-content">
+                        </div>
+
+                        <div class="feedback-buttons">
+                            <button class="agree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col mdl-cell--3-offset-desktop mdl-cell--1-offset-tablet">
+                                Agree 
+                            </button>
+
+                            <button class="disagree_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
+                                Disagree
+                            </button>
+
+                            <button class="argued_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--2-col">
+                                Well Argued
+                            </button>
+
+                            <button class="flawed_button active feedback_button mdl-button mdl-js-button mdl-cell mdl-cell--1-col">
+                                Flawed Argument
+                            </button>
+
+                            <button class="reply_button mdl-button mdl-js-button mdl-button--raised mdl-cell mdl-cell--2-col-desktop mdl-cell--1-col-tablet">
+                                Reply
+                            </button>
+                        </div>
+                    </div> <!-- closes comment -->
+                
+                </div> <!-- Closes comments -->
+
+                <!-- comments snackbar -->       
+                <div id="comments-toast" class="mdl-js-snackbar mdl-snackbar">
                     <div class="mdl-snackbar__text"></div>
                     <button class="mdl-snackbar__action" type="button"></button>
                 </div>
 
-                <div id="toast-2" class="mdl-js-snackbar mdl-snackbar">
+                <!-- login snackbar -->       
+                <div id="login-toast" class="mdl-js-snackbar mdl-snackbar">
                     <div class="mdl-snackbar__text"></div>
                     <button class="mdl-snackbar__action" type="button"></button>
                 </div>
-
-
-            </main>
+            </main> <!-- Closes mdl-grid -->
         </div> <!-- Closes mdl-layout -->
         <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/comments.js"></script>
-    </body> <!-- Closes mdl-layout -->
+    </body>
 </html>
