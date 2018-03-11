@@ -1,5 +1,8 @@
 .comments {
-    padding: 15pt !important;
+    padding-left: 15pt !important;
+    padding-right: 15pt !important;
+    padding-bottom: 15pt !important;
+    padding-top: 26pt !important;
     overflow-y: scroll !important;
     max-height: 98.2%;
     background-color: whitesmoke !important;
