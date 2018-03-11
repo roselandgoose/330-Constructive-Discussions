@@ -1,0 +1,32 @@
+.article_full_image {
+    min-height: 300px;
+  background: url('../media/lead_960.jpg') center / cover;
+}
+
+.content-column {
+    overflow-y: scroll !important;
+    padding-left: 15pt;
+    padding-right: 15pt;
+    padding-top: 32pt;
+}
+
+.content-title {
+    font-family: 'Libre Baskerville', serif;
+    line-height: 105%;
+    font-weight: bold;
+    font-size:  30pt;
+}
+
+.article {
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+.content-blurb {
+    font-family: 'Mukta Malar', sans-serif;
+}
+
+#video-size {
+    width: 100% !important;
+}
+
+.content-column::-webkit-scrollbar { width: 0 !important }

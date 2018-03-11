@@ -1,0 +1,120 @@
+.comments {
+    padding: 15pt !important;
+    overflow-y: scroll !important;
+}
+
+.comments::-webkit-scrollbar { width: 0 !important }
+
+.comment {
+    background-color: lightgrey;
+    text-align: right;
+    display: inline-grid;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    justify-content: space-between;
+}
+
+/* commenter */ 
+.commenter {
+    grid-column: 1 / 4;
+}
+
+.commenter-profile-picture {
+    float: left;
+    
+    width: 25px;
+    height: 25px;
+    
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+.commenter-name {
+    float: left;
+    
+    padding-left: 5px;
+    padding-top: 9px;
+    
+    font-weight: bold;
+}
+
+/* feedback score */
+.feedback_score {
+    grid-column: 4 / 9;
+}
+
+.agreement_score {
+    width: 70px;
+    display: inline-block;
+}
+
+.argument_score {
+    width: 100px;
+    display: inline-block;
+}
+
+/* comment content */
+.comment-content {
+    grid-column: 1 / 9;
+    text-align: left;
+}
+
+/* feedback buttons */
+.feedback_button {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.agree_button {
+    grid-column: 2;
+    text-align: right !important;
+}
+
+.agree_label {
+    text-align: center;
+    grid-column: 3;
+    line-height: 38px;
+    height: 24px;
+}
+
+.disagree_button {
+    text-align: left !important;
+    grid-column: 4;
+}
+
+.argued_button {
+    grid-column: 5;
+    text-align: right !important;
+}
+
+.argued_label {
+    text-align: center;
+    grid-column: 6;
+    line-height: 38px;
+    height: 24px;
+}
+
+.flawed_button {
+    grid-column: 7;
+    text-align: left !important;
+}
+
+/* reply button */
+.reply_button {
+    grid-column: 8
+}
+
+/* new comment process */
+#new_comment-dialogue {
+    display: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -150%);
+}
+
+#comment-template {
+    display: none;
+}

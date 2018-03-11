@@ -32,7 +32,7 @@ main {
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
     ),
-    url('./media/city.jpg');
+    url('../media/city.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,16 +41,6 @@ main {
 
 .mdl-textfield {
     margin-right: 10px !important;
-}
-
-#view-source {
-    position: fixed;
-    display: block;
-    right: 0;
-    bottom: 0;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    z-index: 900;
 }
 
 /* Global mdl-tweaks */
@@ -64,16 +54,6 @@ main {
 }
 
 /* Global Header */
-
-#black {
-    color: black;
-    display: none;
-}
-
-#black1 {
-    color: black;
-    display: none;
-}
 
 #profile {
     border-style: solid;
@@ -158,8 +138,7 @@ main {
  */
 
 
- .header {
-
+.header {
     background-color: #061b3d !important;
 }
 
@@ -204,7 +183,7 @@ main {
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.2)
       ),
-    url(media/capitol-hill.png);
+    url(../media/capitol-hill.png);
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
@@ -267,7 +246,7 @@ main {
 
  .demo-card-image.mdl-card {
     min-height: 300px;
-  background: url('media/lead_960.jpg') center / cover;
+  background: url('../media/lead_960.jpg') center / cover;
 }
 
 .demo-card-image__filename {
@@ -290,7 +269,7 @@ main {
 
 /* New comments */
 
-.modal {
+.new_comment_dialogue {
     display: none;
     position: fixed;
     z-index: 0;
@@ -315,6 +294,7 @@ main {
     width: 100%;
 }
 
+/*
 .upvote {
     display: none;
     color: green;
@@ -325,10 +305,6 @@ main {
     color: red;
 }
 
-.reply {
-    display: none;
-}
-
 .active.upvote {
     display: block;
 }
@@ -337,8 +313,42 @@ main {
     display: block;
 }
 
+*/
+
+.feedback_button {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.agree_button {
+    color: green;
+}
+
+.disagree_button {
+    color: red;
+}
+
+.argued_button {
+    color: green;
+}
+
+.flawed_button {
+    color: red;
+}
+
+.reply {
+    display: none;
+}
 .reply.active {
     display: block;
+}
+
+.score-container {
+    display: flex;
+}
+
+.score {
+    width: 50%;
 }
 
 .comments {
@@ -353,34 +363,12 @@ main {
     width:100%;
 }
 
-#uparrow {
-    color: green;
-}
-
-#downarrow {
-    color: red;
-}
-
 .comments-bar {
     overflow-y: scroll;
     height: 98%;
 }
-.comments .comment {
+.comment {
     background-color: lightgrey;
-}
-
- .fab.active {
-    cursor: default;
-    background: #FFF;
-    border-radius: .125em;
-    width: 100%;
-    height: 350px;
-    box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35);
-    top: 10%;
-}
-
-.active .fab-icon {
-    display: none;
 }
 
 .active .protect {
@@ -437,14 +425,14 @@ Profile Page
 #profile_background {
     color: #fff;
     background:
-      url('media/female_image.png') #46B6AC;
+      url('../media/female_image.png') #46B6AC;
       background-size: 100%;
 }
 
 #profile_background2 {
     color: #fff;
     background:
-      url('media/male_image.png') #46B6AC;
+      url('../media/male_image.png') #46B6AC;
       background-size: 100%;
 }
 
