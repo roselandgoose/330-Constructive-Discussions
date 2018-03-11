@@ -36,11 +36,12 @@ main {
 }
 
 #header-profile-icon {
-    display: none;
+    disp: none;
 }
 
 #header-login-button {
     margin-left: 5px;
+    font-family: 'Mukta Malar', sans-serif !important;
 }
 
 #header-logout-button {
@@ -74,7 +75,7 @@ main {
 
 /* Global Content Settings */
 .title {
-    font-family: 'Abril Fatface', cursive !important;
+    font-family: 'Libre Baskerville', serif !important;
 }
 
 .contentclass {
@@ -89,3 +90,7 @@ main {
     background-repeat: no-repeat;
 }
 
+/* Snackbar Settings */
+.mdl-snackbar__text{
+    font-family: 'Mukta Malar', sans-serif !important;
+}

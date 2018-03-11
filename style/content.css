@@ -8,6 +8,7 @@
     padding-left: 15pt;
     padding-right: 15pt;
     padding-top: 32pt;
+    background-color: lightgrey !important;
 }
 
 .content-title {
@@ -30,3 +31,15 @@
 }
 
 .content-column::-webkit-scrollbar { width: 0 !important }
+
+#byline{
+    font-weight: 400 !important;
+}
+
+.comment-title{
+    font-family: 'Libre Baskerville', serif !important;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 40px;
+    margin: 24px 0;
+}
