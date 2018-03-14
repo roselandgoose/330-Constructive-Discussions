@@ -21,6 +21,12 @@ $(document).ready(function() {
     
     function open_new_comment_dialogue(event) {
         if ((userState == '1') || (userState == '2')) {
+            if (event.target.parentNode.id == 'add_comment_button') {
+                // Comment is not a reply
+            }
+            else {
+                // Comment is a reply
+            }
             new_comment_dialogue.style.display = "block";
         }
         else {
@@ -37,27 +43,40 @@ $(document).ready(function() {
     }
 
     // On clicking the reply button, open the dialogue box with the correct context
-
-    // On pressing enter in the box, click the submit button
+    // I can update the open_new_comment_dialogue event handler to set an attribute on the dialogue box containing either the id of the comment being replied to or the id of the comments container before opening the dialogue box.
 
     // On submission, duplicate the model comment into the correct context, insert the correct content, and scroll down to it
     new_comment_submit_button.addEventListener('click', create_comment);
 
     function create_comment(event) {
-        clone_comment(event);
-        //console.log($('#new-comment0'));
-    }
+        var new_comment_text = new_comment_text_area.value;
 
-    function clone_comment(event) {
-        var new_comment = $("#comment-template").clone();
-        new_comment.attr('id', 'new-comment' + num_new_comments);
+        if (new_comment_text) {
+            // Copies the template comment and displays it
+            $("#comment-template").clone().attr('id', 'new-comment' + num_new_comments).appendTo(comments);
+            // This should read the attribute from the dialogue box to determine where to place the comment.
 
-        // Increment the counter
-        num_new_comments++;
-        
-        new_comment.appendTo(comments); // This apperantly changes the display setting automatically
+            // Updates the text of the duplicated template to the submitted text
+            $('#new-comment' + num_new_comments).children("div.comment-content").text(new_comment_text);
+
+            // Increment the counter
+            num_new_comments++;
+
+            // Close the dialogue box
+            
+            // Scroll down to the new comment
+        }
+        else {
+            var comment_failure_message = {message: "Comments cannot be empty."};
+            comment_notification.MaterialSnackbar.showSnackbar(comment_failure_message);
+        }
+
     }
 
     /* Feedback */
-    // On clicking a button, update score
+    // On clicking a feedback button (envokes general handler):
+    //  get the id of the comment
+    //  get the type of the activated button (an attribute set in html)
+    //  read the current score
+    //  update score with logic
 })
