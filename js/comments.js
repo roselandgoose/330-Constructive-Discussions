@@ -15,12 +15,14 @@ $(document).ready(function() {
     var close_comment_button = document.getElementById("new_comment-close_button");
     var num_new_comments = 0;
     var reply_buttons = $('.reply_button');
+    var feedback_buttons = $('.feedback_button');
 
     /* Comment Creation */
     // On clicking the add comment button, open the dialogue box with the correct context
     add_comment_button.addEventListener('click', open_new_comment_dialogue);
     
     function open_new_comment_dialogue(event) {
+        var userState = sessionStorage.getItem('userState');
         if ((userState == '1') || (userState == '2')) {
             if (event.target.parentNode.id == 'add_comment_button') {
                 // Comment is not a reply -> append to #comments
@@ -94,6 +96,8 @@ $(document).ready(function() {
             // Update event handlers
             var reply_buttons = $('.reply_button');
             reply_buttons.on('click', open_new_comment_dialogue);
+            var feedback_buttons = $('.feedback_button');
+            feedback_buttons.on('click', feedback);
         }
         else {
             var comment_failure_message = {message: "Comments cannot be empty."};
@@ -104,8 +108,76 @@ $(document).ready(function() {
 
     /* Feedback */
     // On clicking a feedback button (envokes general handler):
-    //  get the id of the comment
-    //  get the type of the activated button (an attribute set in html)
-    //  read the current score
-    //  update score with logic
+    feedback_buttons.on('click', feedback);
+
+    function feedback(event) {
+        // Handy filtering functions
+        function remove_empty(el) {
+            return (el.length != 0) && (el != '\n');
+        }
+
+        function get_score(div) {
+            var array = div.text().split(' ').filter(remove_empty).pop().split('/');
+            return [parseInt(array[0]), parseInt(array[1])]
+        }
+        
+        // get the target comment
+        var target_comment = $(this).parent();
+
+        var argument_feedback_given = target_comment.attr("argument_feedback_given");
+        var agreement_feedback_given = target_comment.attr("agreement_feedback_given");
+
+        // get the current feedback scores
+        var agreement_div = target_comment.children(".feedback_score").children(".agreement_score");
+        var argument_div = target_comment.children(".feedback_score").children(".argument_score");
+        
+        var agreement_score = get_score(agreement_div); 
+        var argument_score = get_score(argument_div);
+        
+        // cases on the type of the activated button
+        if ($(this).hasClass("agree_button")) {
+            if (agreement_feedback_given == "false") {
+                var new_score_text = "Agree: " + (agreement_score[0] + 1) + "/" + (agreement_score[1] + 1);
+                agreement_div.text(new_score_text);
+                target_comment.attr("agreement_feedback_given", "true");
+            }
+            else {
+                var comment_failure_message = {message: "You can only declare agreement once."};
+                comment_notification.MaterialSnackbar.showSnackbar(comment_failure_message);
+            }
+        }
+        else if ($(this).hasClass("disagree_button")) {
+            if (agreement_feedback_given == "false") {
+                var new_score_text = "Agree: " + (agreement_score[0] - 1) + "/" + (agreement_score[1] + 1);
+                agreement_div.text(new_score_text);
+                target_comment.attr("agreement_feedback_given", "true");
+            }
+            else {
+                var comment_failure_message = {message: "You can only declare agreement once."};
+                comment_notification.MaterialSnackbar.showSnackbar(comment_failure_message);
+            }
+        }
+        else if ($(this).hasClass("argued_button")) {
+            if (argument_feedback_given == "false") {
+                var new_score_text = "Well Argued: " + (argument_score[0] + 1) + "/" + (argument_score[1] + 1);
+                argument_div.text(new_score_text);
+                target_comment.attr("argument_feedback_given", "true");
+            }
+            else {
+                var comment_failure_message = {message: "You can only assess argument once."};
+                comment_notification.MaterialSnackbar.showSnackbar(comment_failure_message);
+            }
+        }
+        else if ($(this).hasClass("flawed_button")) {
+            if (argument_feedback_given == "false") {
+                var new_score_text = "Well Argued: " + (argument_score[0] - 1) + "/" + (argument_score[1] + 1);
+                argument_div.text(new_score_text);
+                target_comment.attr("argument_feedback_given", "true");
+            }
+            else {
+                var comment_failure_message = {message: "You can only assess argument once."};
+                comment_notification.MaterialSnackbar.showSnackbar(comment_failure_message);
+            }
+        }
+    }
 })
