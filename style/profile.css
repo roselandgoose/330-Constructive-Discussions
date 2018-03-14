@@ -104,3 +104,7 @@ div [class^="datefield-"] {
 .df-submit {
     float: right;
 }
+
+.comment {
+    background-color: lightgrey;
+}
