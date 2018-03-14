@@ -161,7 +161,7 @@
                     </div> <!-- Closes article-body" -->
                 </div> <!-- Closes article -->
 
-                <div class ="mdl-cell--top content mdl-shadow--4dp mdl-cell mdl-cell--5-col-desktop mdl-cell--8-col mdl-grid comments">
+                <div id="comments" class ="mdl-cell--top content mdl-shadow--4dp mdl-cell mdl-cell--5-col-desktop mdl-cell--8-col mdl-grid">
 
                     <!-- new comment composition dialogue -->
                     <div id="new_comment-dialogue" class="mdl-card mdl-shadow--2dp">
@@ -203,6 +203,7 @@
                     <hr class="horizontal_line" />
 
 
+                    <div class="comment_wrapper">
                     <div id='article-comment-1' class="comment mdl-cell mdl-cell--12-col mdl-shadow--4dp">
 
                         <div class = "commenter">
@@ -257,9 +258,12 @@
                         </button>
 
                     </div> <!-- closes comment -->
+                    <div class="replies_container"></div>
+                    </div> <!-- closes comment wrapper -->
 
 
-                    <div id='comment-template' class="comment mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-grid">
+                    <div class="comment_wrapper">
+                    <div id='comment-template' class="comment mdl-cell mdl-cell--12-col mdl-shadow--4dp">
                         <div class = "commenter">
                             <!-- profile picture -->
                             <div class = "commenter-profile-picture">
@@ -268,7 +272,7 @@
 
                             <!-- commenter name -->
                             <div class="commenter-name">
-                                Jane Doe
+                                Commenter
                             </div>
                         </div>
 
@@ -284,7 +288,7 @@
                         </div>
 
                         <div class = "mdl-card__supporting-text comment-content">
-                            I believe immigration is a part of the American Dream!
+                            Comment content
                         </div>
 
                         <button class="agree_button active feedback_button mdl-button mdl-js-button">
@@ -311,8 +315,9 @@
                             Reply
                         </button>
 
-                    
                     </div> <!-- closes comment -->
+                    <div class="replies_container"></div>
+                    </div> <!-- closes comment wrapper -->
 
                 </div>
 

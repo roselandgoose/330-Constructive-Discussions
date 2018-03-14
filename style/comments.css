@@ -1,4 +1,4 @@
-.comments {
+#comments {
     padding-left: 15pt !important;
     padding-right: 15pt !important;
     padding-bottom: 15pt !important;
@@ -8,8 +8,11 @@
     background-color: whitesmoke !important;
 }
 
-.comments::-webkit-scrollbar { width: 0 !important }
+#comments::-webkit-scrollbar { width: 0 !important }
 
+.comment_wrapper {
+    width: 100%;
+}
 .comment {
     background-color: lightgrey;
     text-align: right;
@@ -127,4 +130,9 @@
 
 #comment-template {
     display: none;
+}
+
+.replies_container {
+    display: none;
+    padding-left: 10%;
 }

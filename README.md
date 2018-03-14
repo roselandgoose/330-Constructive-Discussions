@@ -7,8 +7,9 @@ BTW. I have a script in all the headers that integrates with my editor for live 
     * [ ] comments header
     * [ ] Consider whitesmoke homepage
 * [ ] Fix cleared label bug
-* [ ] Storing id for determining where to place reply or new comment as an attribute
-* [ ] Reply containers
-* [ ] Standard template grid
+* [x] Storing id for determining where to place reply or new comment as an attribute
+* [x] Reply containers
+* [x] Standard template grid
+* [x] Commenter name
 * [ ] Feedback counters
 * [ ] Image compression
