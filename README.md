@@ -11,5 +11,5 @@ BTW. I have a script in all the headers that integrates with my editor for live 
 * [x] Reply containers
 * [x] Standard template grid
 * [x] Commenter name
-* [ ] Feedback counters
+* [x] Feedback counters
 * [ ] Image compression
