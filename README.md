@@ -5,8 +5,10 @@ BTW. I have a script in all the headers that integrates with my editor for live 
 * [ ] Consistent content page styling
     * [ ] background color
     * [ ] comments header
-    * [ ] Consider whitesmoke homepage
-* [ ] Fix cleared label bug
+* [x] Fix cleared label bug
+* [ ] Weird comment formatting on profile page
+* [ ] Actual comment text
+* [ ] Create Account link color
 * [x] Storing id for determining where to place reply or new comment as an attribute
 * [x] Reply containers
 * [x] Standard template grid

@@ -45,6 +45,8 @@ $(document).ready(function() {
     function close_new_comment_dialogue(event) {
         new_comment_dialogue.style.display = "none";
         new_comment_text_area.value = ''; // This has the side effect of removing the label -- BUG
+
+        $("#new_comment-text_box").removeClass('is-dirty');
     }
 
     // On clicking the reply button, open the dialogue box with the correct context
