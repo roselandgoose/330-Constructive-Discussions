@@ -89,24 +89,26 @@ $(document).ready(function() {
                 commenter_name.text("John Smith"); 
             }
 
-            // Increment the counter
-            num_new_comments++;
-
             // Close the dialogue box
             close_new_comment_dialogue();
             
             // Scroll down to the new comment
             
             // Update event handlers
-            var reply_buttons = $('.reply_button');
-            reply_buttons.on('click', open_new_comment_dialogue);
+            $('#new-comment' + num_new_comments).children('.reply_button').on('click', open_new_comment_dialogue);
+            //reply_buttons.on('click', open_new_comment_dialogue);
             
-            var feedback_buttons = $('.feedback_button');
-            feedback_buttons.on('click', feedback);
+            //var feedback_buttons = $('.feedback_button');
+            $('#new-comment' + num_new_comments).children('.feedback_button').on('click', feedback);
+            //feedback_buttons.on('click', feedback);
             
             var comments_array = $(".comment");
             comments_array.hover(show_current_feedback_buttons, hide_previous_feedback_buttons);
             hide_all_feedback_buttons();
+
+            // Increment the counter
+            num_new_comments++;
+
         }
         else {
             var comment_failure_message = {message: "Comments cannot be empty."};
