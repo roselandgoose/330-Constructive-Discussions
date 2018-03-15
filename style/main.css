@@ -71,6 +71,10 @@ main {
     z-index: 2;
 }
 
+#create-account-link {
+    color: rgb(63,81,181) !important;
+}
+
 .login-text {
     margin-top: 0px !important;
     margin-right: 0px !important;
