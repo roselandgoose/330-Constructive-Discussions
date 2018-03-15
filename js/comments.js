@@ -159,7 +159,7 @@ $(document).ready(function() {
             }
             else if ($(this).hasClass("disagree_button")) {
                 if (agreement_feedback_given == "false") {
-                    var new_score_text = "Agree: " + (agreement_score[0] - 1) + "/" + (agreement_score[1] + 1);
+                    var new_score_text = "Agree: " + (agreement_score[0]) + "/" + (agreement_score[1] + 1);
                     agreement_div.text(new_score_text);
                     target_comment.attr("agreement_feedback_given", "true");
                 }
@@ -181,7 +181,7 @@ $(document).ready(function() {
             }
             else if ($(this).hasClass("flawed_button")) {
                 if (argument_feedback_given == "false") {
-                    var new_score_text = "Well Argued: " + (argument_score[0] - 1) + "/" + (argument_score[1] + 1);
+                    var new_score_text = "Well Argued: " + (argument_score[0]) + "/" + (argument_score[1] + 1);
                     argument_div.text(new_score_text);
                     target_comment.attr("argument_feedback_given", "true");
                 }
