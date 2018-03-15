@@ -161,7 +161,7 @@
                         <div class="mdl-card__title mdl-card--expand">
                             <form action="#">
                                 <div id = "new_comment-text_box" class="mdl-textfield mdl-js-textfield">
-                                    <textarea class="mdl-textfield__input" type="text" rows= "5" id="new_comment-text_box"></textarea>
+                                    <textarea class="mdl-textfield__input" type="text" rows= "5" id="new_comment-text_area"></textarea>
                                     <label class="mdl-textfield__label" for="new_comment-text_box">Comment Here</label>
                                 </div>
                             </form>
@@ -194,7 +194,8 @@
                     <hr class="horizontal_line" />
 
 
-                    <div id='article-comment-1' class="comment mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+                    <div class="comment_wrapper">
+                    <div id='article-comment-1' class="comment mdl-cell mdl-cell--12-col mdl-shadow--4dp" agreement_feedback_given="false" argument_feedback_given="false">
 
                         <div class = "commenter">
                             <!-- profile picture -->
@@ -248,9 +249,12 @@
                         </button>
 
                     </div> <!-- closes comment -->
+                    <div class="replies_container"></div>
+                    </div>
 
 
-                    <div id='comment-template' class="comment mdl-grid mdl-cell mdl-cell--12-col mdl-shadow--4dp mdl-grid">
+                    <div id='comment-template-wrapper' class="comment_wrapper">
+                    <div id='comment-template' class="comment mdl-cell mdl-cell--12-col mdl-shadow--4dp" agreement_feedback_given="false" argument_feedback_given="false">
                         <div class = "commenter">
                             <!-- profile picture -->
                             <div class = "commenter-profile-picture">
@@ -302,6 +306,8 @@
 
                     
                     </div> <!-- closes comment -->
+                    <div class="replies_container"></div>
+                    </div>
 
                 
                 </div> <!-- Closes comments -->
