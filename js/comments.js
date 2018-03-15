@@ -8,6 +8,7 @@ $(document).ready(function() {
     
     // Commenting
     var comments = document.querySelector('#comments');
+    var comments_array = $(".comment");
     var add_comment_button = document.getElementById("add_comment_button");
     var new_comment_dialogue = document.getElementById("new_comment-dialogue");
     var new_comment_text_area = document.getElementById("new_comment-text_area");
@@ -62,14 +63,15 @@ $(document).ready(function() {
 
         if (new_comment_text) {
             // Copies the template comment and displays it
-            var new_comment = $("#comment-template").clone().attr('id', 'new-comment' + num_new_comments)
+            var new_comment_wrapper = $("#comment-template-wrapper").clone().attr('id', 'new-comment-wrapper' + num_new_comments);
+            new_comment_wrapper.children(".comment").attr('id', 'new-comment' + num_new_comments)
             // This should read the attribute from the dialogue box to determine where to place the comment.
             if (target_id == 'false') {
-                new_comment.appendTo(comments);
+                new_comment_wrapper.appendTo(comments);
             }
             else {
                 var replies_container = $('#' + target_id).parents(".comment_wrapper").children(".replies_container")[0];
-                new_comment.appendTo(replies_container);
+                new_comment_wrapper.appendTo(replies_container);
                 replies_container.style.display = "block";
             }
 
@@ -98,8 +100,13 @@ $(document).ready(function() {
             // Update event handlers
             var reply_buttons = $('.reply_button');
             reply_buttons.on('click', open_new_comment_dialogue);
+            
             var feedback_buttons = $('.feedback_button');
             feedback_buttons.on('click', feedback);
+            
+            var comments_array = $(".comment");
+            comments_array.hover(show_current_feedback_buttons, hide_previous_feedback_buttons);
+            hide_all_feedback_buttons();
         }
         else {
             var comment_failure_message = {message: "Comments cannot be empty."};
@@ -189,4 +196,29 @@ $(document).ready(function() {
             comment_notification.MaterialSnackbar.showSnackbar(comment_failure_message);
         }
     }
+
+    /* Dynamic Button Display */
+    // Show the feedback buttons when you're hovering over a comment, but not otherwise
+    
+    comments_array.hover(show_current_feedback_buttons, hide_previous_feedback_buttons);
+    
+    function show_current_feedback_buttons(event) {
+        $(this).children(".feedback_button").css('display', "inline-block");
+        $(this).children(".agree_label").css('display', "inline-block");
+        $(this).children(".argued_label").css('display', "inline-block");
+    }
+
+    function hide_previous_feedback_buttons(event) {
+        $(this).children(".feedback_button").css('display', "none");
+        $(this).children(".agree_label").css('display', "none");
+        $(this).children(".argued_label").css('display', "none");
+    }
+
+    // Hide feedback buttons on page load
+    document.onload = hide_all_feedback_buttons();
+
+    function hide_all_feedback_buttons() {
+        $(".feedback_button").css('display', "none");
+    }
+
 })
