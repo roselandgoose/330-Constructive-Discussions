@@ -93,6 +93,8 @@ $(document).ready(function() {
             close_new_comment_dialogue();
             
             // Scroll down to the new comment
+            var scrolling_target = document.getElementById('new-comment' + num_new_comments);
+            scrolling_target.scrollIntoView({alignToTop: false});
             
             // Update event handlers
             $('#new-comment' + num_new_comments).children('.reply_button').on('click', open_new_comment_dialogue);
